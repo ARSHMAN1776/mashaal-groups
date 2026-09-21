@@ -4,392 +4,309 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coming Soon | Mashaal Groups</title>
-  <meta name="description" content="Digital platform currently in active development. Part of Mashaal Groups.">
+  <meta name="description" content="Site will coming soon - Mashaal Groups">
 
-  <!-- Design System & Styles -->
   <link rel="stylesheet" href="css/design-system.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
 
   <style>
-    body {
-      min-height: 100vh;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; /* Strictly no scroll */
+      background: linear-gradient(105deg, #1d0309 0%, #28070e 45%, #380b14 100%);
+      font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+      color: #FFFFFF;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background: linear-gradient(105deg, #1d0309 0%, #28070e 45%, #380b14 100%);
-      color: #FFFFFF;
       position: relative;
-      overflow-x: hidden;
     }
 
     /* Ambient animated lighting orbs */
-    .ambient-glow-1 {
+    .glow-sphere {
       position: absolute;
-      top: -15%;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .glow-1 {
+      top: 15%;
       left: 20%;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(120, 32, 48, 0.35) 0%, transparent 70%);
-      filter: blur(60px);
-      animation: floatGlow 12s ease-in-out infinite alternate;
-      pointer-events: none;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(160, 32, 54, 0.45) 0%, transparent 70%);
+      animation: pulseSphere 8s ease-in-out infinite alternate;
     }
 
-    .ambient-glow-2 {
-      position: absolute;
-      bottom: -10%;
-      right: 15%;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(197, 160, 89, 0.18) 0%, transparent 70%);
-      filter: blur(70px);
-      animation: floatGlow 15s ease-in-out infinite alternate-reverse;
-      pointer-events: none;
+    .glow-2 {
+      bottom: 10%;
+      right: 20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.25) 0%, transparent 70%);
+      animation: pulseSphere 10s ease-in-out infinite alternate-reverse;
     }
 
-    @keyframes floatGlow {
-      0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-      50% { transform: translate(40px, 30px) scale(1.15); opacity: 0.9; }
-      100% { transform: translate(-30px, -20px) scale(0.95); opacity: 0.7; }
+    @keyframes pulseSphere {
+      0% { transform: scale(0.9) translate(0, 0); opacity: 0.5; }
+      50% { transform: scale(1.18) translate(30px, -20px); opacity: 0.9; }
+      100% { transform: scale(0.95) translate(-20px, 20px); opacity: 0.6; }
     }
 
-    /* Header in coming soon */
-    .cs-header {
-      padding: 2.2rem 0;
+    /* Top Bar */
+    .cs-topbar {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: relative;
       z-index: 10;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .cs-nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .cs-logo {
+      font-family: var(--font-serif-brand, 'Cinzel', serif);
+      font-size: 1.15rem;
+      letter-spacing: 0.2em;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
-    .back-home-link {
+    .cs-back-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.75);
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      transition: color 0.25s ease, transform 0.25s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .back-home-link:hover {
+    .cs-back-btn:hover {
       color: #FFFFFF;
       transform: translateX(-4px);
     }
 
-    /* Main Content Container */
-    .cs-main {
-      flex: 1;
+    /* Center Stage - strictly fits screen without scrolling */
+    .cs-center {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    /* Animated Pulsing Radar Rings */
+    .radar-container {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin-bottom: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4rem 1.5rem;
+    }
+
+    .radar-ring {
+      position: absolute;
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      border-radius: 50%;
+      animation: radarWave 3s cubic-bezier(0.1, 0.5, 0.4, 1) infinite;
+    }
+
+    .radar-ring:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .radar-ring:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .radar-core {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #DEBF7D 0%, #782030 100%);
+      box-shadow: 0 0 25px rgba(222, 191, 125, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      z-index: 5;
+      z-index: 2;
+      animation: coreGlow 2.5s ease-in-out infinite alternate;
     }
 
-    .cs-card {
-      max-width: 780px;
-      width: 100%;
-      text-align: center;
-      background: rgba(36, 6, 12, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-      padding: 4.5rem 3.5rem;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      animation: fadeInScale 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    @keyframes radarWave {
+      0% { width: 40px; height: 40px; opacity: 1; transform: scale(1); }
+      100% { width: 140px; height: 140px; opacity: 0; transform: scale(1.6); }
     }
 
-    @keyframes fadeInScale {
-      from { opacity: 0; transform: translateY(24px) scale(0.97); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
+    @keyframes coreGlow {
+      0% { box-shadow: 0 0 15px rgba(222, 191, 125, 0.6); transform: scale(0.95); }
+      100% { box-shadow: 0 0 35px rgba(222, 191, 125, 1); transform: scale(1.05); }
     }
 
-    .cs-badge {
+    /* Brand Name */
+    .cs-brand-tag {
+      font-family: var(--font-serif-brand, 'Cinzel', serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--accent-gold, #C5A059);
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* Target Announcement Text with Animated Shimmer */
+    .cs-headline {
+      font-family: var(--font-serif-brand, 'Cinzel', serif);
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, #FFFFFF 20%, #E7DCD3 50%, #C5A059 80%, #FFFFFF 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 4s linear infinite;
+    }
+
+    @keyframes textShimmer {
+      to { background-position: 200% center; }
+    }
+
+    /* Elegant Sub-indicator */
+    .cs-status-pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 0.5rem 1.25rem;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      gap: 0.6rem;
+      padding: 0.45rem 1.4rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 100px;
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent-gold);
-      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
     }
 
     .pulse-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background-color: var(--accent-gold);
-      box-shadow: 0 0 12px var(--accent-gold);
-      animation: pulseAnim 2s infinite;
+      background-color: #C5A059;
+      box-shadow: 0 0 10px #C5A059;
+      animation: blinkDot 1.6s ease-in-out infinite;
     }
 
-    @keyframes pulseAnim {
-      0% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.6); }
-      70% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
-      100% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
 
-    .cs-division-name {
-      font-family: var(--font-serif-brand);
-      font-size: 3.6rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      line-height: 1.15;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .cs-tagline {
-      font-family: var(--font-serif-heading);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--accent-gold-light);
-      margin-bottom: 1.8rem;
-    }
-
-    .cs-description {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 580px;
-      margin: 0 auto 2.8rem auto;
-      font-weight: 300;
-    }
-
-    /* Animated Progress Indicator */
-    .cs-progress-wrap {
-      max-width: 440px;
-      margin: 0 auto 2.5rem auto;
-      text-align: left;
-    }
-
-    .cs-progress-label {
+    /* Footer - Fixed at bottom */
+    .cs-bottombar {
+      padding: 1.8rem 3rem;
       display: flex;
       justify-content: space-between;
-      font-size: 0.76rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 0.6rem;
-    }
-
-    .cs-progress-track {
-      height: 4px;
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .cs-progress-bar {
-      height: 100%;
-      width: 78%;
-      background: linear-gradient(90deg, #782030, #c5a059);
-      border-radius: 4px;
-      animation: progressGrow 1.5s ease-out forwards;
-    }
-
-    @keyframes progressGrow {
-      from { width: 0%; }
-      to { width: 78%; }
-    }
-
-    /* Actions */
-    .cs-actions {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .cs-btn-primary {
-      display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      background: #FFFFFF;
-      color: var(--bg-dark-primary);
-      padding: 0.95rem 2rem;
-      border-radius: 4px;
-      font-family: var(--font-serif-brand);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
-
-    .cs-btn-primary:hover {
-      background: var(--accent-gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
-    }
-
-    .cs-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: transparent;
-      color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 0.95rem 2rem;
-      border-radius: 4px;
-      font-family: var(--font-serif-brand);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
-
-    .cs-btn-secondary:hover {
-      border-color: #FFFFFF;
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-2px);
-    }
-
-    /* Footer */
-    .cs-footer {
-      padding: 1.8rem 0;
       position: relative;
       z-index: 10;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.5);
-      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    @media (max-width: 768px) {
-      .cs-card {
-        padding: 3rem 1.8rem;
+    @media (max-width: 640px) {
+      .cs-topbar, .cs-bottombar {
+        padding: 1.5rem;
       }
-      .cs-division-name {
-        font-size: 2.4rem;
-      }
-      .cs-tagline {
-        font-size: 1.15rem;
+      .cs-bottombar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Glow Effects -->
-  <div class="ambient-glow-1"></div>
-  <div class="ambient-glow-2"></div>
+  <div class="glow-sphere glow-1"></div>
+  <div class="glow-sphere glow-2"></div>
 
-  <!-- Header -->
-  <header class="cs-header">
-    <div class="container cs-nav-inner">
-      <a href="index.html" class="brand-logo">
-        MASHAAL GROUPS
-      </a>
-      <a href="index.html" class="back-home-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Mashaal Groups Home</span>
-      </a>
-    </div>
+  <!-- Top bar -->
+  <header class="cs-topbar">
+    <a href="index.html" class="cs-logo">MASHAAL GROUPS</a>
+    <a href="index.html" class="cs-back-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Back</span>
+    </a>
   </header>
 
-  <!-- Main Showcase -->
-  <main class="cs-main">
-    <div class="cs-card">
-      <div class="cs-badge">
-        <span class="pulse-dot"></span>
-        <span id="badgeText">DIGITAL PLATFORM IN DEVELOPMENT</span>
+  <!-- Center Announcement -->
+  <main class="cs-center">
+    <div class="radar-container">
+      <div class="radar-ring"></div>
+      <div class="radar-ring"></div>
+      <div class="radar-ring"></div>
+      <div class="radar-core">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
       </div>
+    </div>
 
-      <h1 class="cs-division-name" id="divisionTitle">MASHAAL FOODS</h1>
-      <p class="cs-tagline" id="divisionTagline">Quality food for a better tomorrow.</p>
-      
-      <p class="cs-description" id="divisionDesc">
-        Our flagship digital portal is currently undergoing final institutional testing. 
-        We look forward to presenting an enterprise experience built to the standards of Mashaal Groups.
-      </p>
-
-      <!-- Animated Progress Tracker -->
-      <div class="cs-progress-wrap">
-        <div class="cs-progress-label">
-          <span>Deployment Status</span>
-          <span style="color: var(--accent-gold); font-weight: 600;">Phase 3: Final Integration</span>
-        </div>
-        <div class="cs-progress-track">
-          <div class="cs-progress-bar"></div>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="cs-actions">
-        <a href="group.html#contact" class="cs-btn-primary">
-          Contact Executive Office
-        </a>
-        <a href="index.html" class="cs-btn-secondary">
-          Explore Mashaal Groups
-        </a>
-      </div>
+    <div class="cs-brand-tag" id="divisionTag">MASHAAL FOODS</div>
+    <h1 class="cs-headline">SITE WILL COMING SOON</h1>
+    
+    <div class="cs-status-pill">
+      <span class="pulse-dot"></span>
+      <span>OFFICIAL LAUNCH IN PROGRESS</span>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="cs-footer">
-    <div class="container">
-      &copy; 2026 Mashaal Groups. All rights reserved. &nbsp;|&nbsp; Built for a stronger tomorrow.
-    </div>
+  <!-- Bottom bar -->
+  <footer class="cs-bottombar">
+    <div>&copy; 2026 Mashaal Groups. All rights reserved.</div>
+    <div>Built for a stronger tomorrow.</div>
   </footer>
 
   <script>
     const divisions = {
-      foods: {
-        title: "MASHAAL FOODS",
-        badge: "FOOD & CONSUMER PRODUCTS",
-        tagline: "Quality food for a better tomorrow.",
-        desc: "Our next-generation global agri-trade, FMCG logistics, and temperature-controlled food distribution portal is preparing for international public rollout."
-      },
-      rentacar: {
-        title: "MASHAAL RENT A CAR",
-        badge: "MOBILITY & TRANSPORTATION",
-        tagline: "Your journey, our priority.",
-        desc: "The premier digital booking engine for our executive chauffeur services, luxury prestige marques, and sustainable corporate EV fleet leasing is launching shortly."
-      },
-      shipping: {
-        title: "MASHWANI SHIPPING L.L.C.",
-        badge: "GLOBAL LOGISTICS & FREIGHT",
-        tagline: "Connecting markets. Delivering possibilities.",
-        desc: "Our real-time ocean cargo booking engine, direct liner schedule tracker, and customs automation portal connecting 65+ international trade ports are undergoing final integration."
-      }
+      foods: "MASHAAL FOODS",
+      rentacar: "MASHAAL RENT A CAR"
     };
 
     const params = new URLSearchParams(window.location.search);
     const key = params.get('b') || 'foods';
-    const config = divisions[key] || divisions.foods;
+    const name = divisions[key] || "MASHAAL ENTERPRISE";
 
-    document.getElementById('divisionTitle').textContent = config.title;
-    document.getElementById('badgeText').textContent = config.badge;
-    document.getElementById('divisionTagline').textContent = config.tagline;
-    document.getElementById('divisionDesc').textContent = config.desc;
-    document.title = `${config.title} | Coming Soon - Mashaal Groups`;
+    document.getElementById('divisionTag').textContent = name;
+    document.title = `${name} | SITE WILL COMING SOON`;
   </script>
 </body>
 </html>

@@ -19,7 +19,8 @@
 3. **Mashaal Rent A Car** — *Mobility & Transportation*  
    Executive chauffeur-driven mobility, VIP luxury fleet leasing, commercial corporate vehicle management, and EV fleet operations.
 4. **Mashwani Shipping L.L.C.** — *Global Logistics & Freight*  
-   International maritime container carrier services (FCL/LCL), project breakbulk charters, customs clearance, and global trade corridors connecting 65+ ports.
+   International maritime container carrier services (FCL/LCL), project breakbulk charters, customs clearance, and global trade corridors connecting 65+ ports.  
+   *Live Platform:* [https://www.mashwanis.com/](https://www.mashwanis.com/)
 
 ---
 
