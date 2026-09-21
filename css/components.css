@@ -334,42 +334,25 @@
 .business-card {
   position: relative;
   background-color: #FFFFFF;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   height: 380px;
-  transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth), border-color 0.4s ease;
+  border: 1px solid rgba(36, 6, 12, 0.08);
 }
 
 .business-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(36, 6, 12, 0.12);
+  box-shadow: 0 22px 48px rgba(36, 6, 12, 0.12);
+  border-color: rgba(107, 28, 40, 0.35);
 }
 
-/* Split Visual on the Right */
+/* Split Visual on the Right (hidden/removed) */
 .card-visual-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
-  overflow: hidden;
-  clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
-  z-index: 1;
-}
-
-.card-visual-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s var(--transition-smooth);
-}
-
-.business-card:hover .card-visual-img {
-  transform: scale(1.08);
+  display: none;
 }
 
 /* Burgundy Badge at Bottom Right */
@@ -386,27 +369,32 @@
   align-items: flex-end;
   justify-content: flex-end;
   padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.business-card:hover .card-corner-badge {
+  background-color: var(--accent-wine);
 }
 
 .badge-icon {
   width: 24px;
   height: 24px;
-  stroke: rgba(255, 255, 255, 0.85);
+  stroke: rgba(255, 255, 255, 0.9);
   fill: none;
   stroke-width: 1.5;
 }
 
-/* Card Content on the Left */
+/* Card Content - Full Width */
 .card-content {
   position: relative;
   z-index: 2;
-  padding: 2.2rem 1.6rem 2rem 1.8rem;
+  padding: 2.5rem 2.2rem 2.2rem 2.2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 65%;
+  width: 100%;
   justify-content: space-between;
-  background: linear-gradient(90deg, #FFFFFF 68%, rgba(255,255,255,0.92) 85%, transparent 100%);
+  background: #FFFFFF;
 }
 
 .card-top {
