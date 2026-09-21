@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-let port = 8080;
+let port = process.env.PORT || 8080;
 function startServer(p) {
   server.listen(p, () => {
     console.log(`Mashaal Groups server running at http://localhost:${p}/`);
