@@ -1,0 +1,402 @@
+/* ==========================================================================
+   MASHAL GROUPS - SUBPAGES STYLESHEET (Businesses, About, Group)
+   ========================================================================== */
+
+/* Page Hero Banner */
+.page-hero {
+  background: linear-gradient(135deg, #180307 0%, #26060D 50%, #3B0E17 100%);
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif-brand);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
+  line-height: 1.15;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.page-hero-subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Businesses Page - Subsidiary Detailed Section */
+.subsidiary-detail-block {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.subsidiary-detail-block:nth-child(even) {
+  background-color: var(--bg-cream-primary);
+}
+
+.subsidiary-detail-block:nth-child(odd) {
+  background-color: var(--bg-cream-light);
+}
+
+.subsidiary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+.subsidiary-grid.reverse {
+  direction: rtl;
+}
+
+.subsidiary-grid.reverse > * {
+  direction: ltr;
+}
+
+.subsidiary-media-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(36, 6, 12, 0.12);
+  height: 440px;
+}
+
+.subsidiary-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--transition-smooth);
+}
+
+.subsidiary-media-frame:hover img {
+  transform: scale(1.04);
+}
+
+.subsidiary-number-tag {
+  font-family: var(--font-serif-heading);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  line-height: 1;
+}
+
+.subsidiary-title {
+  font-family: var(--font-serif-brand);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-dark-primary);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.subsidiary-tagline {
+  font-family: var(--font-serif-heading);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--accent-wine);
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.subsidiary-desc {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--text-dark-secondary);
+  margin-bottom: 1.8rem;
+}
+
+/* Operational Stats Bar within Subsidiary */
+.subsidiary-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.8rem;
+}
+
+/* Timeline Components (About Page) */
+.timeline-section {
+  padding: 6rem 0;
+  background-color: var(--bg-cream-stone);
+}
+
+.timeline-track {
+  position: relative;
+  max-width: 860px;
+  margin: 3.5rem auto 0 auto;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: rgba(36, 6, 12, 0.15);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--accent-wine);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(36, 6, 12, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -7px;
+}
+
+.timeline-year {
+  font-family: var(--font-serif-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-family: var(--font-serif-brand);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+/* Executive Chairman & Leadership */
+.leadership-section {
+  padding: 6rem 0;
+  background-color: var(--bg-cream-light);
+}
+
+.chairman-quote-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 3.5rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+  display: grid;
+  grid-template-columns: 0.45fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.chairman-avatar {
+  border-radius: 6px;
+  overflow: hidden;
+  height: 380px;
+}
+
+.chairman-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chairman-quote-text {
+  font-family: var(--font-serif-heading);
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-dark-primary);
+  margin-bottom: 1.5rem;
+}
+
+.chairman-name {
+  font-family: var(--font-serif-brand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-wine);
+}
+
+.chairman-title {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-dark-muted);
+}
+
+/* Group & Contact Page */
+.contact-section {
+  padding: 6rem 0;
+  background-color: var(--bg-cream-primary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 4.5rem;
+}
+
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-detail-box {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-wine);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.contact-form-container {
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dark-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: var(--bg-cream-light);
+  color: var(--text-dark-primary);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-wine);
+  background-color: #FFFFFF;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--bg-dark-primary);
+  color: #FFFFFF;
+  padding: 1rem 1.8rem;
+  font-family: var(--font-serif-brand);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: var(--bg-dark-elevated);
+  transform: translateY(-2px);
+}
+
+/* Responsive Subpages */
+@media (max-width: 992px) {
+  .subsidiary-grid,
+  .subsidiary-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    direction: ltr;
+  }
+
+  .chairman-quote-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.2rem;
+  }
+
+  .chairman-avatar {
+    height: 300px;
+  }
+
+  .timeline-track::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 55px;
+    padding-right: 15px;
+  }
+
+  .timeline-dot {
+    left: 14px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

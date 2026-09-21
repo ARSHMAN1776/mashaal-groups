@@ -1,0 +1,11 @@
+{
+  "name": "mashal-groups-website",
+  "version": "1.0.0",
+  "description": "Mashal Groups Luxury Corporate Holding Website",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "Mashal Groups",
+  "license": "ISC"
+}
