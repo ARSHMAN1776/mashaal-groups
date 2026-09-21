@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 let port = 8080;
 function startServer(p) {
   server.listen(p, () => {
-    console.log(`Mashal Groups server running at http://localhost:${p}/`);
+    console.log(`Mashaal Groups server running at http://localhost:${p}/`);
   }).on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
       console.log(`Port ${p} in use, trying ${p + 1}...`);

@@ -1,5 +1,5 @@
 /**
- * MASHAL GROUPS - Business Cards Slider & Index Controller
+ * MASHAAL GROUPS - Business Cards Slider & Index Controller
  */
 
 document.addEventListener('DOMContentLoaded', () => {

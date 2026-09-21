@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MASHAL GROUPS - COMPONENTS STYLESHEET
+   MASHAAL GROUPS - COMPONENTS STYLESHEET
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -340,6 +340,7 @@
   display: flex;
   flex-direction: column;
   height: 380px;
+  cursor: pointer;
   transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth), border-color 0.4s ease;
   border: 1px solid rgba(36, 6, 12, 0.08);
 }
@@ -481,7 +482,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   "ABOUT MASHAL GROUPS" Bar Section
+   "ABOUT MASHAAL GROUPS" Bar Section
    -------------------------------------------------------------------------- */
 .about-bar-section {
   background-color: var(--bg-cream-stone);
