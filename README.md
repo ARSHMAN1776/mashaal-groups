@@ -1,77 +1,91 @@
-# Mashaal Groups — Corporate Holding Website
+# MASHAL GROUP — Parent Corporate Holding Enterprise
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-[![Platform](https://img.shields.io/badge/Platform-Web-burgundy.svg)](#)
-[![Status](https://img.shields.io/badge/Status-Complete-green.svg)](#)
+[![Platform: Next.js 15](https://img.shields.io/badge/Framework-Next.js%2015-black.svg)](https://nextjs.org/)
+[![Language: TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Styling: Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38bdf8.svg)](https://tailwindcss.com/)
+[![License: ISC](https://img.shields.io/badge/License-ISC-burgundy.svg)](https://opensource.org/licenses/ISC)
 
-> **"Built around businesses with purpose."**  
-> An ultra-premium corporate holding web application for Mashaal Groups, featuring luxury editorial aesthetics, bespoke photography, minimalist cards, and dedicated subsidiary showcases.
+> **"Building businesses across essential industries, mobility, and global trade."**  
+> An ultra-premium corporate parent website for **MASHAL GROUP**, presenting distinct commercial verticals under unified holding governance with verified operational facts, editorial asymmetry, and zero generic card kits.
 
 ---
 
-## 🏛️ Portfolio Subsidiaries
+## 🏛️ Business Verticals
 
-1. **Mashaal Petroleum** — *Energy & Petrochem*  
-   Bulk industrial wholesale fuels, downstream terminal infrastructure, specialty lubricants, and sustainable clean fuel transition.  
-   *Live Platform:* [https://mashal-petroleum.vercel.app/](https://mashal-petroleum.vercel.app/)
-2. **Mashaal Foods** — *Food & Consumer Products*  
-   Global agricultural staple commodities, FMCG retail brand packaging, temperature-controlled cold-chain logistics across 28 countries.
-3. **Mashaal Rent A Car** — *Mobility & Transportation*  
-   Executive chauffeur-driven mobility, VIP luxury fleet leasing, commercial corporate vehicle management, and EV fleet operations.
-4. **Mashwani Shipping L.L.C.** — *Global Logistics & Freight*  
-   International maritime container carrier services (FCL/LCL), project breakbulk charters, customs clearance, and global trade corridors connecting 65+ ports.  
+1. **Mashal Petroleum** — *Energy & Fuel Forecourts (Active)*  
+   Operates two premier authorized forecourts across Punjab, Pakistan:
+   - **Total PARCO Station** — Khanpur Road, District Rahim Yar Khan, Punjab (24/7 service, Excellium fuels, M-Mart 24/7, auto care).
+   - **Pakistan State Oil (PSO) Station** — Raiwind Road, Raiwind, Lahore, Punjab (24/7 service, Altron X 97, Shop Stop, 24/7 ATM).  
+   *Core Integrity:* 100% refinery-sealed tanker deliveries without third-party blending; 0.0% volumetric calibration tolerance with physical measures available on request.  
+   *Live Forecourt Platform:* [https://mashal-petroleum.vercel.app/](https://mashal-petroleum.vercel.app/)
+
+2. **Mashwani Shipping L.L.C.** — *Global Logistics & Freight Forwarding (Active)*  
+   Established in Dubai, United Arab Emirates in 2017 as an authorized NVOCC agent and freight forwarding specialist. Connecting trade corridors across Pakistan, the Middle East (GCC), India, and global markets.  
+   *Verified Services:* Air freight, sea freight (FCL/LCL, ISO tanks, breakbulk), overland trucking (GCC & Levant), Afghan transit trade, warehousing & cross-stuffing, and EDI customs clearance.  
+   *Corporate Office:* Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE (Tel: +971-4-3239360).  
    *Live Platform:* [https://www.mashwanis.com/](https://www.mashwanis.com/)
 
----
+3. **Mashal Foods** — *Food & Consumer Businesses (Coming Soon)*  
+   An upcoming corporate vertical dedicated to consumer staples, food commodities, and disciplined supply-chain integrity. Transparently positioned as future group expansion.
 
-## 📂 Page Architecture
-
-- **`index.html`** — Flagship landing page:
-  - Hero with high-contrast serif typography (`MASHAAL GROUPS`), vision statement, and architectural colonnade.
-  - Interactive *Our Businesses* cards (`01 02 03 04`) linking directly in new tabs (Mashaal Petroleum to live platform, other 3 to animated Coming Soon page).
-  - *About Mashaal Groups* bar with live stat counters (`04 Businesses`, `12+ Industries`, `1 Vision`).
-  - Strategic investment pillars and holding footer.
-- **`coming-soon.html`** — Luxury animated Coming Soon page featuring the rich oxblood hero background color, pulsing indicators, and dynamic subsidiary context.
-- **`businesses.html`** — Dedicated portfolio deep dive for all 4 subsidiaries with operational specs, capacity indicators, and direct platform/inquiry links.
-- **`about.html`** — Corporate heritage, Executive Chairman's statement, three decades milestone timeline (1998–2026), and core cultural values.
-- **`group.html`** — Holding corporate structure, ESG charter 2030, international trade hubs, and interactive headquarters inquiry form.
+4. **Mashal Rent A Car** — *Mobility & Transportation (Coming Soon)*  
+   An upcoming corporate mobility division engineered to provide structured fleet reliability, corporate transport arrangements, and executive passenger mobility.
 
 ---
 
-## 🎨 Design System & Aesthetics
+## 📂 Multi-Page Information Architecture
 
-- **Primary Colors:** Deep Oxblood / Rich Burgundy (`#190308` to `#24060C`), Warm Alabaster & Cream (`#FAF8F5` to `#ECE5DA`), Terracotta Accent (`#C95D4A`), and Champagne Gold (`#C5A059`).
+- **`/` (Homepage)** — Flagship 10-section parent corporate narrative:
+  1. **Hero**: Monumental architectural visual, parent identity `MASHAL GROUP`.
+  2. **The Group**: Editorial holding overview, generous whitespace, autonomous vertical model.
+  3. **Our Businesses**: Centerpiece portfolio with alternating editorial rows (no cheap 4-card grids!).
+  4. **Group Scale & Presence**: Strictly verified factual markers (04 verticals, 2 core hubs, 2017 establishment, 24/7 forecourt operations).
+  5. **Mashal Petroleum Feature**: Dedicated forecourt operator spotlight with Total PARCO & PSO credentials.
+  6. **Mashwani Shipping Feature**: Dedicated Dubai NVOCC logistics showcase and verified service matrix.
+  7. **Group Philosophy**: Authentic institutional commitments (Operational Reliability, Autonomous Excellence, Patient Stewardship).
+  8. **Regional Footprint**: Restrained typographic geographic representation (Dubai Maritime Hub, Punjab Forecourts, GCC/India Corridors).
+  9. **Governance & Updates**: Official holding announcements and governance protocol.
+  10. **Headquarters & Inquiries**: Distinguishes Group Headquarters from Subsidiary Operating Desks with interactive routing.
+- **`/about`** — Parent company governance charter, holding architecture, and verified milestones (no invented dates).
+- **`/businesses`** — Portfolio overview comparing sectors, synergies, and vertical autonomy.
+- **`/businesses/mashal-petroleum`** — Deep-dive verified showcase for Mashal Petroleum.
+- **`/businesses/mashwani-shipping`** — Deep-dive verified showcase for Mashwani Shipping L.L.C.
+- **`/businesses/mashal-foods`** — Dedicated "Coming Soon" vertical presentation.
+- **`/businesses/mashal-rent-a-car`** — Dedicated "Coming Soon" vertical presentation.
+- **`/contact`** — Global communications directory separating Group Headquarters from Subsidiary Operating Desks.
+
+---
+
+## 🎨 Color Palette & Typography Tokens (100% Preserved)
+
+- **Deep Oxblood / Burgundy:** `#190308`, `#24060C`, `#2C0910`, `#370C15`
+- **Warm Alabaster & Cream:** `#FAF8F5`, `#F3EFE7`, `#ECE5DA`
+- **Accents:** Terracotta (`#C95D4A`), Champagne Gold (`#C5A059`, `#DEBF7D`), Wine (`#6B1C28`)
 - **Typography:** `Cinzel` & `Playfair Display` (Google Fonts editorial serifs) paired with `Plus Jakarta Sans`.
-- **Zero Heavy Framework Bloat:** Ultra-fast, responsive vanilla HTML5, modern CSS3 tokens, and vanilla ES6+ JavaScript.
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or higher)
-
 ### Run Locally
 
-1. Clone or download the repository:
-   ```bash
-   git clone https://github.com/ARSHMAN1776/mashaal-groups.git
-   cd mashaal-groups
-   ```
+```bash
+# Install dependencies
+npm install
 
-2. Start the local server:
-   ```bash
-   npm run dev
-   # or
-   npm start
-   ```
+# Start Next.js development server
+npm run dev
 
-3. Open your browser and navigate to:
-   ```
-   http://localhost:8080/
-   ```
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) (or the assigned port) in your browser.
 
 ---
 
 ## 📄 License
-This project is licensed under the ISC License. © 2026 Mashaal Groups. All rights reserved.
+© 2026 MASHAL GROUP. All rights reserved.
