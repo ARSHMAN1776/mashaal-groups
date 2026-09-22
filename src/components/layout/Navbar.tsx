@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { BUSINESSES } from "@/lib/data";
+import BrandLogo from "@/components/ui/BrandLogo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -45,12 +46,8 @@ export default function Navbar() {
           className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] py-1"
           aria-label="MASHAAL GROUPS Corporate Holding"
         >
-          {/* Refined Minimal Monogram */}
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[#370C15] via-[#24060C] to-[#190308] border border-[#C5A059]/40 flex items-center justify-center text-[#DEBF7D] shadow-md group-hover:border-[#DEBF7D] transition-all duration-300">
-            <span className="font-sans font-extrabold text-base sm:text-lg text-white group-hover:text-[#DEBF7D] transition-colors">
-              M
-            </span>
-          </div>
+          {/* Corporate SVG Emblem */}
+          <BrandLogo className="w-9 h-9 sm:w-10 sm:h-10" />
 
           <div className="flex flex-col">
             <span className="font-sans font-bold text-base sm:text-lg tracking-[0.08em] text-white uppercase group-hover:text-[#DEBF7D] transition-colors leading-tight">

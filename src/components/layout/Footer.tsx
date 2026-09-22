@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, MapPin, Phone, Mail, Building2, Globe2, ShieldCheck } from "lucide-react";
 import { BUSINESSES } from "@/lib/data";
+import BrandLogo from "@/components/ui/BrandLogo";
 
 export default function Footer() {
   return (
@@ -11,11 +12,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="group inline-flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#370C15] via-[#24060C] to-[#190308] border border-[#C5A059]/40 flex items-center justify-center text-[#DEBF7D] shadow-md group-hover:border-[#DEBF7D] transition-all duration-300">
-                <span className="font-sans font-extrabold text-lg text-white group-hover:text-[#DEBF7D] transition-colors">
-                  M
-                </span>
-              </div>
+              <BrandLogo className="w-10 h-10" />
               <div className="flex flex-col">
                 <span className="font-sans text-xl font-bold tracking-[0.08em] text-white block uppercase group-hover:text-[#DEBF7D] transition-colors">
                   MASHAAL GROUPS
