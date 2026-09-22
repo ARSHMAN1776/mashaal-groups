@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mashaalgroups.com"),
   title: "MASHAL GROUP — Diversified Parent Corporate Enterprise",
   description:
     "MASHAL GROUP is a diversified holding corporate enterprise governing independent operating businesses across energy forecourts, international freight logistics, consumer food commodities, and mobility.",
