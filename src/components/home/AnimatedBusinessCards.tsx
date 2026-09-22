@@ -198,7 +198,7 @@ export default function AnimatedBusinessCards() {
                       );
                       if (foundIdx !== -1) setActiveCardIndex(foundIdx);
                     }}
-                    className={`group relative flex flex-col justify-between rounded-xl p-7 bg-gradient-to-b from-[#2A0811] via-[#20050B] to-[#150206] border transition-all duration-300 shadow-xl cursor-pointer min-h-[380px] ${
+                    className={`group relative flex flex-col justify-between rounded-xl p-7 bg-gradient-to-b from-[#2A0811] via-[#20050B] to-[#150206] border transition-all duration-300 shadow-xl cursor-pointer min-h-[320px] ${
                       isActiveIndex
                         ? "border-[#DEBF7D] shadow-[0_20px_45px_rgba(0,0,0,0.6),0_0_25px_rgba(222,191,125,0.15)] -translate-y-2"
                         : "border-white/10 hover:border-[#DEBF7D]/60 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_20px_rgba(197,160,89,0.12)]"
@@ -239,10 +239,6 @@ export default function AnimatedBusinessCards() {
                       <h3 className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight uppercase group-hover:text-[#DEBF7D] transition-colors leading-tight">
                         {b.name}
                       </h3>
-
-                      <p className="font-sans text-xs text-[#C5B5AE] leading-relaxed line-clamp-3">
-                        {b.shortDescription}
-                      </p>
 
                       {/* Key Facts Micro-Row */}
                       <div className="pt-2 grid grid-cols-2 gap-2 text-left">
