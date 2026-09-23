@@ -117,7 +117,7 @@ export default function Footer() {
               <div className="p-3 bg-[#24060C] border border-white/10 rounded">
                 <div className="font-semibold text-white mb-1 flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Punjab Forecourts (Mashal Petroleum)</span>
+                  <span>Punjab Forecourts (Mashaal Petroleum)</span>
                 </div>
                 <p className="text-[11px] leading-relaxed">
                   Total PARCO Khanpur Rd, Rahim Yar Khan &amp; PSO Raiwind Rd, Lahore
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Bottom Tier: Legal & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C5B5AE]">
           <div>
-            &copy; {new Date().getFullYear()} MASHAL GROUP. All rights reserved. Diversified parent corporate holding.
+            &copy; {new Date().getFullYear()} MASHAAL GROUP. All rights reserved. Diversified parent corporate holding.
           </div>
           <div className="flex items-center gap-6">
             <Link href="/about" className="hover:text-white transition-colors">

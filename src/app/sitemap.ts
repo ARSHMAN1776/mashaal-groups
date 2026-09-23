@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/businesses/mashal-petroleum`,
+      url: `${baseUrl}/businesses/mashaal-petroleum`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -35,13 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/businesses/mashal-foods`,
+      url: `${baseUrl}/businesses/mashaal-foods`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/businesses/mashal-rent-a-car`,
+      url: `${baseUrl}/businesses/mashaal-rent-a-car`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

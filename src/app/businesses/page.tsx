@@ -5,9 +5,9 @@ import { BUSINESSES } from "@/lib/data";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
-  title: "Our Businesses — MASHAL GROUP Portfolio",
+  title: "Our Businesses — MASHAAL GROUP Portfolio",
   description:
-    "Explore the diversified business verticals of MASHAL GROUP: Mashal Petroleum, Mashwani Shipping L.L.C., Mashal Foods, and Mashal Rent A Car.",
+    "Explore the diversified business verticals of MASHAAL GROUP: Mashaal Petroleum, Mashwani Shipping L.L.C., Mashaal Foods, and Mashaal Rent A Car.",
 };
 
 export default function BusinessesOverviewPage() {

@@ -4,12 +4,12 @@ import { ArrowLeft, ExternalLink, Fuel, CheckCircle2, ShieldCheck, MapPin, Clock
 import { BUSINESSES } from "@/lib/data";
 
 export const metadata = {
-  title: "Mashal Petroleum — Energy & Forecourts | MASHAL GROUP",
+  title: "Mashaal Petroleum — Energy & Forecourts | MASHAAL GROUP",
   description:
-    "Mashal Petroleum operates certified Total PARCO (Rahim Yar Khan) and Pakistan State Oil (Raiwind Lahore) forecourts under 100% refinery-sealed fuel integrity and digital calibration.",
+    "Mashaal Petroleum operates certified Total PARCO (Rahim Yar Khan) and Pakistan State Oil (Raiwind Lahore) forecourts under 100% refinery-sealed fuel integrity and digital calibration.",
 };
 
-export default function MashalPetroleumPage() {
+export default function MashaalPetroleumPage() {
   const business = BUSINESSES.find((b) => b.id === "petroleum")!;
 
   return (
@@ -36,7 +36,7 @@ export default function MashalPetroleumPage() {
             </div>
 
             <h1 className="font-sans font-bold text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white uppercase">
-              MASHAL PETROLEUM
+              MASHAAL PETROLEUM
             </h1>
 
             <p className="font-sans font-bold italic text-lg sm:text-xl text-[#DEBF7D]">
@@ -76,7 +76,7 @@ export default function MashalPetroleumPage() {
               <div className="relative aspect-[16/10] w-full rounded overflow-hidden border border-white/10 shadow-2xl">
                 <Image
                   src={business.image}
-                  alt="Mashal Petroleum Infrastructure"
+                  alt="Mashaal Petroleum Infrastructure"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 60vw"

@@ -4,9 +4,9 @@ import InquiryForm from "@/components/forms/InquiryForm";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
-  title: "Corporate Offices & Inquiries — MASHAL GROUP",
+  title: "Corporate Offices & Inquiries — MASHAAL GROUP",
   description:
-    "Contact MASHAL GROUP corporate holding leadership or connect directly with our subsidiary operating offices in Dubai and Pakistan.",
+    "Contact MASHAAL GROUP corporate holding leadership or connect directly with our subsidiary operating offices in Dubai and Pakistan.",
 };
 
 export default function ContactPage() {
@@ -23,7 +23,7 @@ export default function ContactPage() {
               CONTACT &amp; OFFICES
             </h1>
             <p className="font-sans text-base sm:text-lg text-[#C5B5AE] leading-relaxed">
-              Connect directly with the MASHAL GROUP parent executive office or route operational matters to specific subsidiary operating desks.
+              Connect directly with the MASHAAL GROUP parent executive office or route operational matters to specific subsidiary operating desks.
             </p>
           </ScrollReveal>
         </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#C5A059]" />
-                  <span>contact@mashalpetroleum.pk</span>
+                  <span>contact@mashaalpetroleum.pk</span>
                 </div>
               </div>
             </StaggerItem>
@@ -131,7 +131,7 @@ export default function ContactPage() {
               </h2>
               <div className="w-12 h-[2px] bg-[#C5A059]" />
               <p className="font-sans text-sm sm:text-base text-[#4A403C] leading-relaxed">
-                Whether you are seeking corporate partnership discussions, supply-chain vendor onboarding, freight forwarding quotations, or general information regarding MASHAL GROUP, our secretariat coordinates direct routing to appropriate decision-makers.
+                Whether you are seeking corporate partnership discussions, supply-chain vendor onboarding, freight forwarding quotations, or general information regarding MASHAAL GROUP, our secretariat coordinates direct routing to appropriate decision-makers.
               </p>
 
               <div className="p-6 bg-[#ECE5DA]/60 border border-[#ECE5DA] rounded space-y-3">

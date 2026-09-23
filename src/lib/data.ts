@@ -25,7 +25,7 @@ export const BUSINESSES: BusinessVertical[] = [
   {
     id: "petroleum",
     number: "01",
-    name: "MASHAL PETROLEUM",
+    name: "MASHAAL PETROLEUM",
     category: "Energy & Fuel Forecourts",
     status: "Active",
     tagline: "Two iconic forecourts. One uncompromising standard of fuel integrity.",
@@ -33,9 +33,9 @@ export const BUSINESSES: BusinessVertical[] = [
       "Operating official Total PARCO and Pakistan State Oil (PSO) forecourts across Punjab, delivering 100% refinery-sealed fuels, certified digital calibration, and 24/7 highway hospitality.",
     longDescription:
       "Mashaal Petroleum is an established fuel forecourt operator serving private motorists, commercial transit drivers, and industrial logistics fleets across Punjab, Pakistan. With authorized franchises under Pakistan's leading energy corporations—Total PARCO and Pakistan State Oil (PSO)—every forecourt adheres to strict zero-tolerance calibration, unadulterated terminal supply, and round-the-clock motorist amenities.",
-    image: "/images/mashal-petroleum.jpg",
-    slug: "mashal-petroleum",
-    externalUrl: "https://mashal-petroleum.vercel.app/",
+    image: "/images/mashaal-petroleum.jpg",
+    slug: "mashaal-petroleum",
+    externalUrl: "https://mashaal-petroleum.vercel.app/",
     highlights: [
       "100% Refinery-Sealed Direct Terminals",
       "0.0% Volumetric Tolerance (Calibrated Digital Dispensers)",
@@ -63,22 +63,22 @@ export const BUSINESSES: BusinessVertical[] = [
     contactInfo: {
       address: "Khanpur Road, Rahim Yar Khan & Raiwind Road, Lahore, Punjab, Pakistan",
       phone: "Inquiries via Forecourt Management Desk",
-      email: "contact@mashalpetroleum.pk"
+      email: "contact@mashaalpetroleum.pk"
     }
   },
   {
     id: "foods",
     number: "02",
-    name: "MASHAL FOODS",
+    name: "MASHAAL FOODS",
     category: "Food & Consumer Products",
     status: "Coming Soon",
     tagline: "Expanding the group into food and consumer businesses.",
     shortDescription:
       "An upcoming corporate vertical dedicated to consumer staples, premium food products, and disciplined supply-chain integrity currently in development.",
     longDescription:
-      "Mashal Foods represents the group's planned expansion into essential consumer sectors. Leveraging the holding group's supply-chain infrastructure and ethical governance principles, this vertical is being structured to address emerging market food demand with uncompromised quality standards.",
-    image: "/images/mashal-foods.jpg",
-    slug: "mashal-foods",
+      "Mashaal Foods represents the group's planned expansion into essential consumer sectors. Leveraging the holding group's supply-chain infrastructure and ethical governance principles, this vertical is being structured to address emerging market food demand with uncompromised quality standards.",
+    image: "/images/mashaal-foods.jpg",
+    slug: "mashaal-foods",
     highlights: [
       "Upcoming Corporate Vertical",
       "Focus on Essential Food & Consumer Commodities",
@@ -95,16 +95,16 @@ export const BUSINESSES: BusinessVertical[] = [
   {
     id: "rentacar",
     number: "03",
-    name: "MASHAL RENT A CAR",
+    name: "MASHAAL RENT A CAR",
     category: "Mobility & Transportation",
     status: "Coming Soon",
     tagline: "An upcoming mobility and transportation vertical.",
     shortDescription:
       "A forthcoming mobility division being engineered to provide corporate fleet solutions, executive transit, and structured transport services.",
     longDescription:
-      "Mashal Rent A Car is an upcoming mobility vertical within the Mashal Group portfolio. Designed to provide high-reliability vehicle solutions for commercial clients and individual motorists, the platform is currently undergoing strategic fleet architecture and operational planning.",
-    image: "/images/mashal-rent-a-car.jpg",
-    slug: "mashal-rent-a-car",
+      "Mashaal Rent A Car is an upcoming mobility vertical within the Mashaal Group portfolio. Designed to provide high-reliability vehicle solutions for commercial clients and individual motorists, the platform is currently undergoing strategic fleet architecture and operational planning.",
+    image: "/images/mashaal-rent-a-car.jpg",
+    slug: "mashaal-rent-a-car",
     highlights: [
       "Upcoming Corporate Vertical",
       "Corporate & Commercial Fleet Solutions",

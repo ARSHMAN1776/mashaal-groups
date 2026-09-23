@@ -39,7 +39,7 @@ export default function InquiryForm({ theme = "dark", defaultVertical = "group" 
         <CheckCircle2 className="w-10 h-10 text-[#C5A059] mx-auto" />
         <h3 className="font-sans font-semibold text-xl font-bold">Inquiry Dispatched</h3>
         <p className="text-xs text-[#C5B5AE] max-w-md mx-auto leading-relaxed">
-          Thank you for contacting MASHAL GROUP. Your inquiry has been routed to the designated executive department. Our secretariat will respond within 1 business day.
+          Thank you for contacting MASHAAL GROUP. Your inquiry has been routed to the designated executive department. Our secretariat will respond within 1 business day.
         </p>
         <button
           type="button"
@@ -161,11 +161,11 @@ export default function InquiryForm({ theme = "dark", defaultVertical = "group" 
               : "bg-[#FAF8F5] border border-[#ECE5DA] text-[#1C1514] focus:border-[#6B1C28]"
           }`}
         >
-          <option value="group">MASHAL GROUP Holding Inquiries</option>
-          <option value="petroleum">Mashal Petroleum (Forecourts &amp; Fuel)</option>
+          <option value="group">MASHAAL GROUP Holding Inquiries</option>
+          <option value="petroleum">Mashaal Petroleum (Forecourts &amp; Fuel)</option>
           <option value="shipping">Mashwani Shipping L.L.C. (Freight &amp; NVOCC)</option>
-          <option value="foods">Mashal Foods (Strategic Planning)</option>
-          <option value="rentacar">Mashal Rent A Car (Mobility Division)</option>
+          <option value="foods">Mashaal Foods (Strategic Planning)</option>
+          <option value="rentacar">Mashaal Rent A Car (Mobility Division)</option>
         </select>
       </div>
 

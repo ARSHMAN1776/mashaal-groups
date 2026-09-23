@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Clock, Car, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Clock, ShieldCheck, Sparkles } from "lucide-react";
 import { BUSINESSES } from "@/lib/data";
 
 export const metadata = {
-  title: "Mashal Rent A Car — Mobility & Transportation (Coming Soon) | MASHAL GROUP",
+  title: "Mashaal Foods — Food & Consumer Vertical (Coming Soon) | MASHAAL GROUP",
   description:
-    "Mashal Rent A Car is an upcoming mobility and transportation vertical within MASHAL GROUP, currently in strategic fleet planning.",
+    "Mashaal Foods is an upcoming corporate vertical within MASHAAL GROUP, expanding the group into food and consumer businesses with uncompromising quality standards.",
 };
 
-export default function MashalRentACarPage() {
-  const business = BUSINESSES.find((b) => b.id === "rentacar")!;
+export default function MashaalFoodsPage() {
+  const business = BUSINESSES.find((b) => b.id === "foods")!;
 
   return (
     <div className="flex flex-col w-full bg-[#190308] text-[#F7F3EE]">
@@ -28,7 +28,7 @@ export default function MashalRentACarPage() {
           <div className="max-w-3xl space-y-4">
             <div className="flex items-center gap-3">
               <span className="font-mono text-xs text-[#C5A059] uppercase tracking-widest">
-                Vertical 04 / Mobility
+                Vertical 03 / Food &amp; Consumer
               </span>
               <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded font-semibold bg-white/5 text-[#DEBF7D] border border-white/15">
                 Coming Soon • In Development
@@ -36,15 +36,15 @@ export default function MashalRentACarPage() {
             </div>
 
             <h1 className="font-sans font-bold text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white uppercase">
-              MASHAL RENT A CAR
+              MASHAAL FOODS
             </h1>
 
             <p className="font-sans font-bold italic text-lg sm:text-xl text-[#DEBF7D]">
-              &ldquo;An upcoming mobility and transportation vertical.&rdquo;
+              &ldquo;Expanding the group into food and consumer businesses.&rdquo;
             </p>
 
             <p className="font-sans text-sm sm:text-base text-[#C5B5AE] leading-relaxed">
-              Engineered to bring structured fleet reliability, corporate transport arrangements, and executive passenger mobility into the group portfolio.
+              A forthcoming corporate vertical structured to address essential staple food commodities, consumer food products, and disciplined supply-chain integrity.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function MashalRentACarPage() {
               <div className="relative aspect-[4/3] w-full rounded overflow-hidden border border-white/10 shadow-2xl">
                 <Image
                   src={business.image}
-                  alt="Mashal Rent A Car Visual Direction"
+                  alt="Mashaal Foods Visual Direction"
                   fill
                   className="object-cover object-center filter grayscale contrast-125 opacity-80"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -67,7 +67,7 @@ export default function MashalRentACarPage() {
                   <div className="space-y-2">
                     <Clock className="w-8 h-8 text-[#DEBF7D] mx-auto opacity-80" />
                     <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#DEBF7D] block">
-                      Mobility Fleet Architecture
+                      Vertical Under Architecture
                     </span>
                     <span className="font-sans font-semibold text-base text-white block">
                       Coming Soon
@@ -79,23 +79,23 @@ export default function MashalRentACarPage() {
 
             <div className="lg:col-span-6 space-y-6">
               <span className="holding-label text-[#C5A059]">
-                MOBILITY HORIZON
+                STRATEGIC EXPANSION
               </span>
               <h2 className="font-sans font-bold text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Corporate Fleet &amp; Passenger Transit
+                Quality Food For Tomorrow
               </h2>
               <p className="text-xs sm:text-sm text-[#C5B5AE] leading-relaxed">
-                Positioned to complement the group&apos;s energy forecourts and commercial logistics infrastructure, Mashal Rent A Car will deliver disciplined mobility management for executive clients, enterprise fleet leasing, and long-distance passenger travel.
+                As part of MASHAAL GROUP&apos;s long-term vision to build sustainable value across foundational real-world sectors, Mashaal Foods is being planned as an ethical consumer enterprise. Synergizing with the group&apos;s existing freight logistics networks and capital discipline, the vertical will focus on trusted sourcing, temperature-controlled distribution, and certified quality controls.
               </p>
               <div className="p-4 bg-[#190308] border border-white/10 rounded text-xs text-[#DEBF7D] font-mono">
-                Status: Fleet feasibility, vendor partnerships, and operational framework currently under review.
+                Status: Strategic planning and commercial infrastructure assessments currently underway.
               </div>
               <div className="pt-2">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#DEBF7D] text-[#190308] text-xs font-semibold uppercase tracking-[0.14em] px-6 py-3 rounded transition-all"
                 >
-                  <span>Inquire with Holding Office</span>
+                  <span>Submit Partnership Inquiry</span>
                 </Link>
               </div>
             </div>

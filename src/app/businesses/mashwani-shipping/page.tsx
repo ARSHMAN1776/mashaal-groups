@@ -4,7 +4,7 @@ import { ArrowLeft, ExternalLink, Ship, Plane, Truck, Building2, ShieldCheck, Ma
 import { BUSINESSES } from "@/lib/data";
 
 export const metadata = {
-  title: "Mashwani Shipping L.L.C. — Global Logistics | MASHAL GROUP",
+  title: "Mashwani Shipping L.L.C. — Global Logistics | MASHAAL GROUP",
   description:
     "Dubai-based NVOCC and international logistics specialist established in 2017, providing multimodal freight forwarding, GCC overland transport, and specialized Afghan transit trade.",
 };

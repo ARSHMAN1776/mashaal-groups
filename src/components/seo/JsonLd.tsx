@@ -7,20 +7,20 @@ export default function JsonLd() {
       {
         "@type": "Corporation",
         "@id": "https://mashaalgroups.com/#corporation",
-        "name": "MASHAL GROUP",
-        "legalName": "MASHAL GROUPS Holding Enterprise",
+        "name": "MASHAAL GROUP",
+        "legalName": "MASHAAL GROUPS Holding Enterprise",
         "alternateName": [
-          "Mashal Group",
+          "Mashaal Group",
           "Mashaal Groups",
-          "Mashal Groups",
+          "Mashaal Groups",
           "Mashaal Group",
           "Mashaal Holding",
-          "Mashal Enterprise"
+          "Mashaal Enterprise"
         ],
         "url": "https://mashaalgroups.com",
         "logo": "https://mashaalgroups.com/icon.svg",
         "image": "https://mashaalgroups.com/images/hero-architecture.jpg",
-        "description": "MASHAL GROUP is a diversified parent corporate holding enterprise governing independent operating businesses across energy forecourts (Mashal Petroleum), global maritime freight forwarding (Mashwani Shipping L.L.C.), consumer food commodities (Mashal Foods), and executive mobility (Mashal Rent A Car). Headquartered across the UAE and Pakistan, with zero affiliation to Iranian or external companies.",
+        "description": "MASHAAL GROUP is a diversified parent corporate holding enterprise governing independent operating businesses across energy forecourts (Mashaal Petroleum), global maritime freight forwarding (Mashwani Shipping L.L.C.), consumer food commodities (Mashaal Foods), and executive mobility (Mashaal Rent A Car). Headquartered across the UAE and Pakistan, with zero affiliation to Iranian or external companies.",
         "slogan": "Building businesses across essential industries, mobility, and global trade.",
         "foundingLocation": [
           {
@@ -49,15 +49,15 @@ export default function JsonLd() {
         "telephone": "+971-4-3239360",
         "sameAs": [
           "https://www.mashwanis.com/",
-          "https://mashal-petroleum.vercel.app/"
+          "https://mashaal-petroleum.vercel.app/"
         ],
         "subOrganization": [
           {
             "@type": "Organization",
             "@id": "https://mashaalgroups.com/#petroleum",
-            "name": "Mashal Petroleum",
+            "name": "Mashaal Petroleum",
             "description": "Premier retail forecourt operator in Punjab, Pakistan with authorized Total PARCO and Pakistan State Oil (PSO) stations.",
-            "url": "https://mashal-petroleum.vercel.app/",
+            "url": "https://mashaal-petroleum.vercel.app/",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
             }
@@ -75,7 +75,7 @@ export default function JsonLd() {
           {
             "@type": "Organization",
             "@id": "https://mashaalgroups.com/#foods",
-            "name": "Mashal Foods",
+            "name": "Mashaal Foods",
             "description": "Upcoming corporate consumer staples, food commodities, and cold-chain supply vertical.",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
@@ -84,7 +84,7 @@ export default function JsonLd() {
           {
             "@type": "Organization",
             "@id": "https://mashaalgroups.com/#rentacar",
-            "name": "Mashal Rent A Car",
+            "name": "Mashaal Rent A Car",
             "description": "Upcoming corporate mobility, executive passenger leasing, and fleet management vertical.",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
@@ -96,8 +96,8 @@ export default function JsonLd() {
         "@type": "WebSite",
         "@id": "https://mashaalgroups.com/#website",
         "url": "https://mashaalgroups.com",
-        "name": "MASHAL GROUP",
-        "description": "Official corporate website of MASHAL GROUP, diversified parent holding enterprise.",
+        "name": "MASHAAL GROUP",
+        "description": "Official corporate website of MASHAAL GROUP, diversified parent holding enterprise.",
         "publisher": {
           "@id": "https://mashaalgroups.com/#corporation"
         },

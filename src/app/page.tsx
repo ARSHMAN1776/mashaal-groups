@@ -97,7 +97,7 @@ export default function HomePage() {
               <div className="space-y-2 pt-2 text-[11px] font-mono text-[#F7F3EE]">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
-                  <span>01 / Mashal Petroleum</span>
+                  <span>01 / Mashaal Petroleum</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
@@ -105,11 +105,11 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                  <span className="text-[#C5B5AE]">03 / Mashal Foods (Upcoming)</span>
+                  <span className="text-[#C5B5AE]">03 / Mashaal Foods (Upcoming)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                  <span className="text-[#C5B5AE]">04 / Mashal Rent A Car (Upcoming)</span>
+                  <span className="text-[#C5B5AE]">04 / Mashaal Rent A Car (Upcoming)</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -164,7 +164,7 @@ export default function HomePage() {
             {/* Right Col: Deep Editorial Prose */}
             <ScrollReveal variant="fade-up" delay={0.2} className="lg:col-span-7 space-y-6 text-[#4A403C]">
               <p className="font-sans text-base sm:text-lg text-[#1C1514] leading-relaxed font-normal">
-                MASHAL GROUP represents an institutional holding collective governing specialized commercial enterprises. Rather than blending distinct sectors under a single operational label, our holding model empowers each vertical to operate with deep industry autonomy while backed by group capital allocation, strategic compliance, and long-term fiduciary oversight.
+                MASHAAL GROUP represents an institutional holding collective governing specialized commercial enterprises. Rather than blending distinct sectors under a single operational label, our holding model empowers each vertical to operate with deep industry autonomy while backed by group capital allocation, strategic compliance, and long-term fiduciary oversight.
               </p>
 
               <div className="w-16 h-[1.5px] bg-[#C5A059]" />
@@ -180,7 +180,7 @@ export default function HomePage() {
                   <strong className="text-[#1C1514] font-sans font-semibold block text-sm mb-1">
                     Disciplined Expansion Horizon
                   </strong>
-                  As we plan measured expansion into essential food commodities (Mashal Foods) and corporate mobility (Mashal Rent A Car), every new venture is measured against our core principle: verified physical reliability over superficial market hype.
+                  As we plan measured expansion into essential food commodities (Mashaal Foods) and corporate mobility (Mashaal Rent A Car), every new venture is measured against our core principle: verified physical reliability over superficial market hype.
                 </div>
               </div>
 
@@ -229,7 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          05 — VERTICAL 01: MASHAL PETROLEUM (NO PICTURE)
+          05 — VERTICAL 01: MASHAAL PETROLEUM (NO PICTURE)
           IMPERIAL FORECOURT OXBLOOD (DARK)
           ========================================================================= */}
       <section id="petroleum" className="bg-gradient-to-b from-[#1E050D] via-[#260810] to-[#140206] text-[#F7F3EE] py-24 sm:py-32 border-b border-white/10">
@@ -243,7 +243,7 @@ export default function HomePage() {
             </div>
 
             <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
-              MASHAL PETROLEUM
+              MASHAAL PETROLEUM
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#DEBF7D] font-medium">
@@ -315,15 +315,15 @@ export default function HomePage() {
 
           <ScrollReveal variant="fade-up" delay={0.15} className="pt-10 flex items-center gap-5 flex-wrap">
             <Link
-              href="/businesses/mashal-petroleum"
+              href="/businesses/mashaal-petroleum"
               className="inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#DEBF7D] text-[#190308] text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
             >
-              <span>Explore Mashal Petroleum Profile</span>
+              <span>Explore Mashaal Petroleum Profile</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
 
             <a
-              href="https://mashal-petroleum.vercel.app/"
+              href="https://mashaal-petroleum.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DEBF7D] hover:text-white transition-colors"
@@ -336,7 +336,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          06 — VERTICAL 02: MASHAL FOODS (NO PICTURE)
+          06 — VERTICAL 02: MASHAAL FOODS (NO PICTURE)
           WARM GOLDEN WHEAT ALABASTER (LIGHT)
           ========================================================================= */}
       <section id="foods" className="bg-[#FAF6F0] text-[#1C1514] py-24 sm:py-32 border-b border-[#E8DFC8]">
@@ -350,7 +350,7 @@ export default function HomePage() {
             </div>
 
             <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1C1514] leading-[1.08]">
-              MASHAL FOODS
+              MASHAAL FOODS
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#6B1C28] font-medium">
@@ -396,10 +396,10 @@ export default function HomePage() {
             </div>
 
             <Link
-              href="/businesses/mashal-foods"
+              href="/businesses/mashaal-foods"
               className="inline-flex items-center gap-2 bg-[#24060C] hover:bg-[#370C15] text-white text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
             >
-              <span>Explore Mashal Foods Profile</span>
+              <span>Explore Mashaal Foods Profile</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </ScrollReveal>
@@ -407,7 +407,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          07 — VERTICAL 03: MASHAL RENT A CAR (NO PICTURE)
+          07 — VERTICAL 03: MASHAAL RENT A CAR (NO PICTURE)
           EXECUTIVE MOBILITY MIDNIGHT (DARK)
           ========================================================================= */}
       <section id="rentacar" className="bg-gradient-to-b from-[#1C050B] via-[#23070E] to-[#140206] text-[#F7F3EE] py-24 sm:py-32 border-b border-white/10">
@@ -421,7 +421,7 @@ export default function HomePage() {
             </div>
 
             <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
-              MASHAL RENT A CAR
+              MASHAAL RENT A CAR
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#DEBF7D] font-medium">
@@ -455,7 +455,7 @@ export default function HomePage() {
               <span className="font-mono text-xs text-[#DEBF7D] uppercase tracking-wider block font-bold">CAPABILITY 03</span>
               <h3 className="font-sans text-base font-bold text-white">Forecourt Hub Synergy</h3>
               <p className="text-xs text-[#C5B5AE] leading-relaxed">
-                Strategic operational synergy with Mashal Petroleum&apos;s forecourt network for vehicle maintenance and fueling points.
+                Strategic operational synergy with Mashaal Petroleum&apos;s forecourt network for vehicle maintenance and fueling points.
               </p>
             </StaggerItem>
           </StaggerContainer>
@@ -467,10 +467,10 @@ export default function HomePage() {
             </div>
 
             <Link
-              href="/businesses/mashal-rent-a-car"
+              href="/businesses/mashaal-rent-a-car"
               className="inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#DEBF7D] text-[#190308] text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
             >
-              <span>Explore Mashal Rent A Car Profile</span>
+              <span>Explore Mashaal Rent A Car Profile</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </ScrollReveal>

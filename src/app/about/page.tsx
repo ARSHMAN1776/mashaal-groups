@@ -5,9 +5,9 @@ import { BUSINESSES } from "@/lib/data";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
-  title: "The Group & Governance — MASHAL GROUP",
+  title: "The Group & Governance — MASHAAL GROUP",
   description:
-    "Explore the corporate architecture, fiduciary governance, and verified milestones of MASHAL GROUP as a diversified parent holding enterprise.",
+    "Explore the corporate architecture, fiduciary governance, and verified milestones of MASHAAL GROUP as a diversified parent holding enterprise.",
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
               THE PARENT ENTERPRISE
             </span>
             <h1 className="font-sans font-bold text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white uppercase">
-              ABOUT MASHAL GROUP
+              ABOUT MASHAAL GROUP
             </h1>
             <p className="font-sans text-base sm:text-lg text-[#C5B5AE] leading-relaxed">
               A diversified corporate group governing autonomous businesses across essential industries. Built on operational reliability, patient capital allocation, and institutional integrity.
@@ -43,7 +43,7 @@ export default function AboutPage() {
               </h2>
               <div className="w-12 h-[2px] bg-[#C5A059]" />
               <p className="font-sans text-sm sm:text-base text-[#4A403C] leading-relaxed">
-                MASHAL GROUP is structured as a parent corporate group rather than an individual commercial company. By separating strategic holding governance from day-to-day vertical operations, we empower our subsidiary leadership teams to focus entirely on operational excellence within their respective sectors.
+                MASHAAL GROUP is structured as a parent corporate group rather than an individual commercial company. By separating strategic holding governance from day-to-day vertical operations, we empower our subsidiary leadership teams to focus entirely on operational excellence within their respective sectors.
               </p>
               <p className="font-sans text-sm sm:text-base text-[#736762] leading-relaxed">
                 Our portfolio encompasses critical physical industries: certified energy forecourts under authorized Total PARCO and Pakistan State Oil (PSO) franchises, Dubai-headquartered international freight forwarding and NVOCC logistics through Mashwani Shipping L.L.C., and emerging consumer and mobility divisions in structured planning.
@@ -76,7 +76,7 @@ export default function AboutPage() {
               The Three Pillars of Holding Governance
             </h2>
             <p className="text-xs sm:text-sm text-[#C5B5AE]">
-              How MASHAL GROUP creates lasting value across its operating companies.
+              How MASHAAL GROUP creates lasting value across its operating companies.
             </p>
           </ScrollReveal>
 
@@ -180,10 +180,10 @@ export default function AboutPage() {
                 </span>
               </div>
               <h3 className="font-sans font-semibold text-lg font-bold text-[#1C1514]">
-                Formalization of MASHAL GROUP Brand Architecture
+                Formalization of MASHAAL GROUP Brand Architecture
               </h3>
               <p className="text-xs sm:text-sm text-[#4A403C] leading-relaxed">
-                Consolidation of holding structure to unify oversight across operating companies and steer measured expansion into consumer food commodities (Mashal Foods) and corporate transport (Mashal Rent A Car).
+                Consolidation of holding structure to unify oversight across operating companies and steer measured expansion into consumer food commodities (Mashaal Foods) and corporate transport (Mashaal Rent A Car).
               </p>
             </StaggerItem>
           </StaggerContainer>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 Executive Directorate &amp; Holding Advisory Board
               </span>
               <span className="text-xs text-[#DEBF7D] font-mono">
-                MASHAL GROUP Holding Enterprise
+                MASHAAL GROUP Holding Enterprise
               </span>
             </div>
           </ScrollReveal>
