@@ -46,7 +46,7 @@ export default function JsonLd() {
             "addressCountry": "PK"
           }
         ],
-        "telephone": "+971-4-3239360",
+        "telephone": "+971-4-8863390",
         "sameAs": [
           "https://www.mashwanis.com/",
           "https://mashaal-petroleum.vercel.app/"

@@ -570,7 +570,7 @@ export default function HomePage() {
               <span className="text-[#1C1514] font-sans font-medium block">Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE</span>
             </div>
             <div className="text-right sm:text-left font-mono text-[11px] text-[#4A403C]">
-              <span>Tel: +971-4-3239360</span> &nbsp;|&nbsp; <span className="text-[#6B1C28] font-semibold">info@mashwanis.com</span>
+              <span>Tel: +971-4-8863390</span> &nbsp;|&nbsp; <span className="text-[#6B1C28] font-semibold">info@mashwanis.com</span>
             </div>
           </ScrollReveal>
 

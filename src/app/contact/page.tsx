@@ -76,7 +76,7 @@ export default function ContactPage() {
               <div className="pt-4 border-t border-white/10 space-y-2 text-xs font-mono text-[#F7F3EE]">
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-[#C5A059]" />
-                  <span>+971-4-3239360</span>
+                  <span>+971-4-8863390</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-[#C5A059]" />
@@ -89,7 +89,37 @@ export default function ContactPage() {
               </div>
             </StaggerItem>
 
-            {/* Office 3: Punjab Forecourts (Petroleum) */}
+            {/* Office 3: Karachi Operations (Mashwani Shipping) */}
+            <StaggerItem className="p-8 bg-[#190308] border border-white/10 rounded-xl space-y-4 shadow-xl hover:border-[#DEBF7D]/50 transition-all duration-300">
+              <div className="w-10 h-10 rounded bg-[#370C15] flex items-center justify-center text-[#DEBF7D]">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#DEBF7D] block">
+                Logistics Vertical • Karachi Office
+              </span>
+              <h2 className="font-sans font-semibold text-xl font-bold text-white">
+                Mashwani Shipping (Private) Limited
+              </h2>
+              <p className="text-xs text-[#C5B5AE] leading-relaxed">
+                Banglow No. D-63, Near Altamash General Hospital, Clifton Block-1, Karachi, Pakistan.
+              </p>
+              <div className="pt-4 border-t border-white/10 space-y-2 text-xs font-mono text-[#F7F3EE]">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-[#C5A059]" />
+                  <span>+92 323 2008789</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-[#C5A059]" />
+                  <span>impkhi@mashwanis.com</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Globe2 className="w-4 h-4 text-[#C5A059]" />
+                  <span>www.mashwanis.com</span>
+                </div>
+              </div>
+            </StaggerItem>
+
+            {/* Office 4: Punjab Forecourts (Petroleum) */}
             <StaggerItem className="p-8 bg-[#190308] border border-white/10 rounded-xl space-y-4 shadow-xl hover:border-[#DEBF7D]/50 transition-all duration-300">
               <div className="w-10 h-10 rounded bg-[#370C15] flex items-center justify-center text-[#DEBF7D]">
                 <Clock className="w-5 h-5" />

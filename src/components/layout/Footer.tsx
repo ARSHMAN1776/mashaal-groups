@@ -110,7 +110,7 @@ export default function Footer() {
                   Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE
                 </p>
                 <p className="text-[11px] text-[#DEBF7D] mt-1 font-mono">
-                  Tel: +971-4-3239360
+                  Tel: +971-4-8863390
                 </p>
               </div>
 

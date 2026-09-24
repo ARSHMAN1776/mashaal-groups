@@ -22,7 +22,7 @@
 2. **Mashwani Shipping L.L.C.** — *Global Logistics & Freight Forwarding (Active)*  
    Established in Dubai, United Arab Emirates in 2017 as an authorized NVOCC agent and freight forwarding specialist. Connecting trade corridors across Pakistan, the Middle East (GCC), India, and global markets.  
    *Verified Services:* Air freight, sea freight (FCL/LCL, ISO tanks, breakbulk), overland trucking (GCC & Levant), Afghan transit trade, warehousing & cross-stuffing, and EDI customs clearance.  
-   *Corporate Office:* Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE (Tel: +971-4-3239360).  
+   *Corporate Office:* Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE (Tel: +971-4-8863390).  
    *Live Platform:* [https://www.mashwanis.com/](https://www.mashwanis.com/)
 
 3. **Mashaal Foods** — *Food & Consumer Businesses (Coming Soon)*  

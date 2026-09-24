@@ -106,7 +106,7 @@ export default function MashwaniShippingPage() {
                   Office #507, 5th Floor, Abraj Al Mamzar Building, P.O. Box 42596, Al Mamzar, Dubai, 94507 – U.A.E.
                 </p>
                 <div className="space-y-1 text-xs font-mono text-[#F7F3EE] pt-1">
-                  <div>Telephone: +971-4-3239360</div>
+                  <div>Telephone: +971-4-8863390</div>
                   <div>Direct Dispatch: +971 50 816 8622</div>
                   <div>Email: info@mashwanis.com</div>
                 </div>

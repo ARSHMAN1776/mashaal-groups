@@ -158,7 +158,7 @@ export const BUSINESSES: BusinessVertical[] = [
     ],
     contactInfo: {
       address: "Office #507, 5th Floor, Abraj Al Mamzar Building, P.O. Box 42596, Al Mamzar, Dubai, 94507 – U.A.E.",
-      phone: "+971-4-3239360 / +971 50 816 8622",
+      phone: "+971-4-8863390 / +971 50 816 8622",
       email: "info@mashwanis.com"
     }
   }
