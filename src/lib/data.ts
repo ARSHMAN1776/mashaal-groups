@@ -35,7 +35,7 @@ export const BUSINESSES: BusinessVertical[] = [
       "Mashaal Petroleum is an established fuel forecourt operator serving private motorists, commercial transit drivers, and industrial logistics fleets across Punjab, Pakistan. With authorized franchises under Pakistan's leading energy corporations—Total PARCO and Pakistan State Oil (PSO)—every forecourt adheres to strict zero-tolerance calibration, unadulterated terminal supply, and round-the-clock motorist amenities.",
     image: "/images/mashaal-petroleum.jpg",
     slug: "mashaal-petroleum",
-    externalUrl: "https://mashaal-petroleum.vercel.app/",
+    externalUrl: "https://petroleum.mashaalgroups.com/",
     highlights: [
       "100% Refinery-Sealed Direct Terminals",
       "0.0% Volumetric Tolerance (Calibrated Digital Dispensers)",
@@ -71,52 +71,82 @@ export const BUSINESSES: BusinessVertical[] = [
     number: "02",
     name: "MASHAAL FOODS",
     category: "Food & Consumer Products",
-    status: "Coming Soon",
-    tagline: "Expanding the group into food and consumer businesses.",
+    status: "Active",
+    tagline: "Quality consumer food commodities, staples, and disciplined supply distribution.",
     shortDescription:
-      "An upcoming corporate vertical dedicated to consumer staples, premium food products, and disciplined supply-chain integrity currently in development.",
+      "Operating consumer staple sourcing, premium food commodities, and disciplined supply-chain distribution across regional commercial markets.",
     longDescription:
-      "Mashaal Foods represents the group's planned expansion into essential consumer sectors. Leveraging the holding group's supply-chain infrastructure and ethical governance principles, this vertical is being structured to address emerging market food demand with uncompromised quality standards.",
+      "Mashaal Foods is an active operating vertical within the MASHAAL GROUP portfolio dedicated to essential consumer food sectors. Leveraging the holding group's supply-chain infrastructure, cold-chain logistics, and ethical governance, Mashaal Foods provides reliable sourcing, processing, and distribution with uncompromised quality standards.",
     image: "/images/mashaal-foods.jpg",
     slug: "mashaal-foods",
+    externalUrl: "https://food.mashaalgroups.com/",
     highlights: [
-      "Upcoming Corporate Vertical",
-      "Focus on Essential Food & Consumer Commodities",
+      "Active Operating Corporate Vertical",
+      "Essential Consumer Food Staples & Commodities",
       "Disciplined Cold-Chain & Quality Governance",
-      "Synergized with Group Logistics Capabilities"
+      "Direct Synergy with Group Multimodal Logistics"
     ],
     keyFacts: [
-      { label: "Vertical Status", value: "In Development" },
+      { label: "Vertical Status", value: "Active / Operating" },
       { label: "Sector", value: "Food & FMCG" },
-      { label: "Positioning", value: "Expanding the Group" },
+      { label: "Live Platform", value: "food.mashaalgroups.com" },
       { label: "Holding Synergy", value: "Logistics Integration" }
-    ]
+    ],
+    locations: [
+      "Operating Distribution Network: Pakistan & Regional Trade Corridors"
+    ],
+    services: [
+      "Essential Edible Commodities & Staple Sourcing",
+      "Wholesale & Consumer Food Supply Distribution",
+      "Certified Cold-Chain Storage & Quality Inspection",
+      "Inter-City Transport & Freight Coordination"
+    ],
+    contactInfo: {
+      address: "MASHAAL GROUP Food & Consumer Operations Desk",
+      phone: "Inquiries via Group Commercial Secretariat",
+      email: "contact@mashaalgroups.com"
+    }
   },
   {
     id: "rentacar",
     number: "03",
     name: "MASHAAL RENT A CAR",
     category: "Mobility & Transportation",
-    status: "Coming Soon",
-    tagline: "An upcoming mobility and transportation vertical.",
+    status: "Active",
+    tagline: "Executive mobility, reliable transit, and corporate fleet solutions.",
     shortDescription:
-      "A forthcoming mobility division being engineered to provide corporate fleet solutions, executive transit, and structured transport services.",
+      "Providing structured corporate fleet solutions, executive transit, and high-reliability mobility services across commercial and individual sectors.",
     longDescription:
-      "Mashaal Rent A Car is an upcoming mobility vertical within the Mashaal Group portfolio. Designed to provide high-reliability vehicle solutions for commercial clients and individual motorists, the platform is currently undergoing strategic fleet architecture and operational planning.",
+      "Mashaal Rent A Car is an active operating mobility vertical within the MASHAAL GROUP portfolio. Engineered to deliver high-reliability transportation solutions for corporate clients and individual motorists, the platform provides executive vehicle rentals, long-term fleet leasing, and 24/7 highway transit support.",
     image: "/images/mashaal-rent-a-car.jpg",
     slug: "mashaal-rent-a-car",
+    externalUrl: "https://rentacar.mashaalgroups.com/",
     highlights: [
-      "Upcoming Corporate Vertical",
+      "Active Operating Corporate Vertical",
       "Corporate & Commercial Fleet Solutions",
       "Synergy with Group Energy & Forecourt Infrastructure",
       "Focus on Reliability & Modern Mobility"
     ],
     keyFacts: [
-      { label: "Vertical Status", value: "In Development" },
+      { label: "Vertical Status", value: "Active / Operating" },
       { label: "Sector", value: "Mobility & Fleet" },
-      { label: "Positioning", value: "Upcoming Vertical" },
+      { label: "Live Platform", value: "rentacar.mashaalgroups.com" },
       { label: "Holding Synergy", value: "Forecourt Network" }
-    ]
+    ],
+    locations: [
+      "Operating Hubs: Punjab, Pakistan (Integrated with Forecourt Hubs)"
+    ],
+    services: [
+      "Long-Term Enterprise Fleet Leasing",
+      "Executive Chauffeur & Airport Transit",
+      "Inter-City Commercial & Passenger Car Rentals",
+      "Scheduled Maintenance via Group Forecourt Facilities"
+    ],
+    contactInfo: {
+      address: "MASHAAL GROUP Mobility Operations Desk, Punjab, Pakistan",
+      phone: "Inquiries via Forecourt & Mobility Desk",
+      email: "contact@mashaalgroups.com"
+    }
   },
   {
     id: "shipping",

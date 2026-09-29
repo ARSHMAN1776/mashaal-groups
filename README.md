@@ -17,7 +17,7 @@
    - **Total PARCO Station** — Khanpur Road, District Rahim Yar Khan, Punjab (24/7 service, Excellium fuels, M-Mart 24/7, auto care).
    - **Pakistan State Oil (PSO) Station** — Raiwind Road, Raiwind, Lahore, Punjab (24/7 service, Altron X 97, Shop Stop, 24/7 ATM).  
    *Core Integrity:* 100% refinery-sealed tanker deliveries without third-party blending; 0.0% volumetric calibration tolerance with physical measures available on request.  
-   *Live Forecourt Platform:* [https://mashaal-petroleum.vercel.app/](https://mashaal-petroleum.vercel.app/)
+   *Live Forecourt Platform:* [https://petroleum.mashaalgroups.com/](https://petroleum.mashaalgroups.com/)
 
 2. **Mashwani Shipping L.L.C.** — *Global Logistics & Freight Forwarding (Active)*  
    Established in Dubai, United Arab Emirates in 2017 as an authorized NVOCC agent and freight forwarding specialist. Connecting trade corridors across Pakistan, the Middle East (GCC), India, and global markets.  
@@ -25,11 +25,13 @@
    *Corporate Office:* Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE (Tel: +971-4-8863390).  
    *Live Platform:* [https://www.mashwanis.com/](https://www.mashwanis.com/)
 
-3. **Mashaal Foods** — *Food & Consumer Businesses (Coming Soon)*  
-   An upcoming corporate vertical dedicated to consumer staples, food commodities, and disciplined supply-chain integrity. Transparently positioned as future group expansion.
+3. **Mashaal Foods** — *Food & Consumer Businesses (Active)*  
+   An active corporate operating vertical dedicated to consumer staples, food commodities, and disciplined supply-chain integrity.  
+   *Live Platform:* [https://food.mashaalgroups.com/](https://food.mashaalgroups.com/)
 
-4. **Mashaal Rent A Car** — *Mobility & Transportation (Coming Soon)*  
-   An upcoming corporate mobility division engineered to provide structured fleet reliability, corporate transport arrangements, and executive passenger mobility.
+4. **Mashaal Rent A Car** — *Mobility & Transportation (Active)*  
+   An active corporate mobility division engineered to provide structured fleet reliability, corporate transport arrangements, and executive passenger mobility.  
+   *Live Platform:* [https://rentacar.mashaalgroups.com/](https://rentacar.mashaalgroups.com/)
 
 ---
 
@@ -50,8 +52,8 @@
 - **`/businesses`** — Portfolio overview comparing sectors, synergies, and vertical autonomy.
 - **`/businesses/mashaal-petroleum`** — Deep-dive verified showcase for Mashaal Petroleum.
 - **`/businesses/mashwani-shipping`** — Deep-dive verified showcase for Mashwani Shipping L.L.C.
-- **`/businesses/mashaal-foods`** — Dedicated "Coming Soon" vertical presentation.
-- **`/businesses/mashaal-rent-a-car`** — Dedicated "Coming Soon" vertical presentation.
+- **`/businesses/mashaal-foods`** — Dedicated active vertical presentation for Mashaal Foods.
+- **`/businesses/mashaal-rent-a-car`** — Dedicated active vertical presentation for Mashaal Rent A Car.
 - **`/contact`** — Global communications directory separating Group Headquarters from Subsidiary Operating Desks.
 
 ---

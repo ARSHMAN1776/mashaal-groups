@@ -104,12 +104,12 @@ export default function HomePage() {
                   <span>02 / Mashwani Shipping L.L.C.</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                  <span className="text-[#C5B5AE]">03 / Mashaal Foods (Upcoming)</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
+                  <span>03 / Mashaal Foods</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                  <span className="text-[#C5B5AE]">04 / Mashaal Rent A Car (Upcoming)</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
+                  <span>04 / Mashaal Rent A Car</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -178,9 +178,9 @@ export default function HomePage() {
                 </div>
                 <div>
                   <strong className="text-[#1C1514] font-sans font-semibold block text-sm mb-1">
-                    Disciplined Expansion Horizon
+                    Autonomous Operating Verticals
                   </strong>
-                  As we plan measured expansion into essential food commodities (Mashaal Foods) and corporate mobility (Mashaal Rent A Car), every new venture is measured against our core principle: verified physical reliability over superficial market hype.
+                  Spanning essential food commodities and distribution (Mashaal Foods), corporate transit and fleet solutions (Mashaal Rent A Car), fuel forecourts, and maritime logistics, every enterprise operates under our core principle: verified physical reliability over superficial market hype.
                 </div>
               </div>
 
@@ -323,7 +323,7 @@ export default function HomePage() {
             </Link>
 
             <a
-              href="https://mashaal-petroleum.vercel.app/"
+              href="https://petroleum.mashaalgroups.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DEBF7D] hover:text-white transition-colors"
@@ -354,11 +354,11 @@ export default function HomePage() {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#6B1C28] font-medium">
-              &ldquo;Expanding the group into food and consumer businesses.&rdquo;
+              &ldquo;Quality consumer food commodities, staples, and disciplined supply distribution.&rdquo;
             </p>
 
             <p className="font-sans text-sm sm:text-base text-[#4A403C] leading-relaxed">
-              An upcoming corporate vertical dedicated to consumer staples, premium food commodities, and disciplined supply-chain integrity currently in development under the parent holding group.
+              An active corporate operating vertical dedicated to consumer staples, premium food commodities, and disciplined supply-chain distribution under the parent holding group.
             </p>
           </ScrollReveal>
 
@@ -390,18 +390,30 @@ export default function HomePage() {
           </StaggerContainer>
 
           <ScrollReveal variant="fade-up" delay={0.15} className="pt-10 flex items-center justify-between gap-5 flex-wrap">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EDE3D1] border border-[#D5C6AC] text-[#6B1C28] text-xs font-mono font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#6B1C28]" />
-              <span>Status: Upcoming Vertical In Strategic Planning</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/20 border border-emerald-600/30 text-emerald-800 text-xs font-mono font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+              <span>Status: Active Operating Division</span>
             </div>
 
-            <Link
-              href="/businesses/mashaal-foods"
-              className="inline-flex items-center gap-2 bg-[#24060C] hover:bg-[#370C15] text-white text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
-            >
-              <span>Explore Mashaal Foods Profile</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link
+                href="/businesses/mashaal-foods"
+                className="inline-flex items-center gap-2 bg-[#24060C] hover:bg-[#370C15] text-white text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
+              >
+                <span>Explore Mashaal Foods Profile</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+
+              <a
+                href="https://food.mashaalgroups.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C6B28] hover:text-[#1C1514] transition-colors"
+              >
+                <span>Open Official Foods Platform</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -425,11 +437,11 @@ export default function HomePage() {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-[#DEBF7D] font-medium">
-              &ldquo;An upcoming mobility and transportation vertical.&rdquo;
+              &ldquo;Executive mobility, reliable transit, and corporate fleet solutions.&rdquo;
             </p>
 
             <p className="font-sans text-sm sm:text-base text-[#C5B5AE] leading-relaxed">
-              A forthcoming mobility division being engineered to provide corporate fleet solutions, executive transit, and structured transportation services across commercial and individual market segments.
+              An active corporate mobility division engineered to provide corporate fleet solutions, executive transit, and structured transportation services across commercial and individual market segments.
             </p>
           </ScrollReveal>
 
@@ -461,18 +473,30 @@ export default function HomePage() {
           </StaggerContainer>
 
           <ScrollReveal variant="fade-up" delay={0.15} className="pt-10 flex items-center justify-between gap-5 flex-wrap">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#190308] border border-[#DEBF7D]/30 text-[#DEBF7D] text-xs font-mono font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#DEBF7D]" />
-              <span>Status: Upcoming Vertical In Development</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Status: Active Operating Division</span>
             </div>
 
-            <Link
-              href="/businesses/mashaal-rent-a-car"
-              className="inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#DEBF7D] text-[#190308] text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
-            >
-              <span>Explore Mashaal Rent A Car Profile</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link
+                href="/businesses/mashaal-rent-a-car"
+                className="inline-flex items-center gap-2 bg-[#FAF8F5] hover:bg-[#DEBF7D] text-[#190308] text-xs font-bold uppercase tracking-[0.14em] px-6 py-3 rounded-lg transition-colors"
+              >
+                <span>Explore Mashaal Rent A Car Profile</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+
+              <a
+                href="https://rentacar.mashaalgroups.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DEBF7D] hover:text-white transition-colors"
+              >
+                <span>Open Official Rent A Car Platform</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>

@@ -28,6 +28,9 @@ export default function AnimatedBusinessCards() {
   const [filter, setFilter] = useState<"all" | "active" | "upcoming">("all");
   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
 
+  const activeCount = BUSINESSES.filter((b) => b.status === "Active").length;
+  const upcomingCount = BUSINESSES.filter((b) => b.status === "Coming Soon").length;
+
   const filteredBusinesses = BUSINESSES.filter((b) => {
     if (filter === "active") return b.status === "Active";
     if (filter === "upcoming") return b.status === "Coming Soon";
@@ -100,7 +103,7 @@ export default function AnimatedBusinessCards() {
                     : "text-[#C5B5AE] hover:text-white"
                 }`}
               >
-                All (4)
+                All ({BUSINESSES.length})
               </button>
               <button
                 type="button"
@@ -111,19 +114,21 @@ export default function AnimatedBusinessCards() {
                     : "text-[#C5B5AE] hover:text-white"
                 }`}
               >
-                Active (2)
+                Active ({activeCount})
               </button>
-              <button
-                type="button"
-                onClick={() => setFilter("upcoming")}
-                className={`px-3.5 py-1.5 rounded-md text-xs font-mono uppercase tracking-wider transition-all ${
-                  filter === "upcoming"
-                    ? "bg-[#C5A059] text-[#190308] font-bold shadow-md"
-                    : "text-[#C5B5AE] hover:text-white"
-                }`}
-              >
-                Upcoming (2)
-              </button>
+              {upcomingCount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setFilter("upcoming")}
+                  className={`px-3.5 py-1.5 rounded-md text-xs font-mono uppercase tracking-wider transition-all ${
+                    filter === "upcoming"
+                      ? "bg-[#C5A059] text-[#190308] font-bold shadow-md"
+                      : "text-[#C5B5AE] hover:text-white"
+                  }`}
+                >
+                  Upcoming ({upcomingCount})
+                </button>
+              )}
             </div>
 
             {/* Numeric Index & Arrows Controller */}
@@ -273,10 +278,10 @@ export default function AnimatedBusinessCards() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1 text-[11px] font-mono text-[#DEBF7D] hover:text-white transition-colors"
-                          title={`Open ${b.name} live platform`}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#DEBF7D]/10 hover:bg-[#DEBF7D] text-[#DEBF7D] hover:text-[#190308] border border-[#DEBF7D]/30 hover:border-[#DEBF7D] text-[11px] font-mono font-medium transition-all"
+                          title={`Open ${b.name} official website`}
                         >
-                          <span>Live</span>
+                          <span>Live Site</span>
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       )}

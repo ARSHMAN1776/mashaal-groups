@@ -142,6 +142,17 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 text-[#C5A059]" />
                   <span>contact@mashaalpetroleum.pk</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <Globe2 className="w-4 h-4 text-[#C5A059]" />
+                  <a
+                    href="https://petroleum.mashaalgroups.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#DEBF7D] transition-colors"
+                  >
+                    petroleum.mashaalgroups.com
+                  </a>
+                </div>
               </div>
             </StaggerItem>
           </StaggerContainer>

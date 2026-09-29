@@ -219,6 +219,29 @@ export default function MashaalPetroleumPage() {
               </div>
             </div>
           </div>
+
+          {business.externalUrl && (
+            <div className="mt-12 p-8 rounded-xl bg-[#24060C] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 border border-white/10">
+              <div className="space-y-1">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#DEBF7D]">
+                  Live Digital Platform
+                </span>
+                <h3 className="text-xl font-bold">Access Mashaal Petroleum Official Platform</h3>
+                <p className="text-xs text-[#C5B5AE]">
+                  View live fuel quality standards, station amenities, location maps, and corporate fleet services.
+                </p>
+              </div>
+              <a
+                href={business.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#DEBF7D] hover:bg-white text-[#190308] text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded transition-all shrink-0"
+              >
+                <span>petroleum.mashaalgroups.com</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          )}
         </div>
       </section>
     </div>

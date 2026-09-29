@@ -164,8 +164,8 @@ export default function InquiryForm({ theme = "dark", defaultVertical = "group" 
           <option value="group">MASHAAL GROUP Holding Inquiries</option>
           <option value="petroleum">Mashaal Petroleum (Forecourts &amp; Fuel)</option>
           <option value="shipping">Mashwani Shipping L.L.C. (Freight &amp; NVOCC)</option>
-          <option value="foods">Mashaal Foods (Strategic Planning)</option>
-          <option value="rentacar">Mashaal Rent A Car (Mobility Division)</option>
+          <option value="foods">Mashaal Foods (Food &amp; Consumer Products)</option>
+          <option value="rentacar">Mashaal Rent A Car (Mobility &amp; Fleet)</option>
         </select>
       </div>
 

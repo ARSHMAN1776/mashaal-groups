@@ -59,13 +59,14 @@ export default function BusinessesOverviewPage() {
                       Vertical {b.number}
                     </span>
                     <span
-                      className={`text-[10px] font-mono uppercase px-2.5 py-1 rounded font-semibold ${
+                      className={`text-[10px] font-mono uppercase px-2.5 py-1 rounded font-semibold inline-flex items-center gap-1.5 ${
                         b.status === "Active"
                           ? "bg-emerald-950/70 text-emerald-400 border border-emerald-500/30"
                           : "bg-white/5 text-[#DEBF7D] border border-white/15"
                       }`}
                     >
-                      {b.status}
+                      {b.status === "Active" && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />}
+                      <span>{b.status === "Active" ? "Operating" : b.status}</span>
                     </span>
                   </div>
 
@@ -109,9 +110,9 @@ export default function BusinessesOverviewPage() {
                         href={b.externalUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-[#DEBF7D] hover:text-white font-mono transition-colors"
+                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded bg-[#DEBF7D]/10 hover:bg-[#DEBF7D] text-[#DEBF7D] hover:text-[#190308] border border-[#DEBF7D]/30 hover:border-[#DEBF7D] text-xs font-mono font-medium transition-all"
                       >
-                        <span>External Platform</span>
+                        <span>Open Official Website</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     )}

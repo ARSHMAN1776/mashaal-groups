@@ -24,7 +24,7 @@ MASHAAL GROUP (mashaalgroups.com) is NOT associated or affiliated with "PetroMas
 ### Vertical 1: Mashaal Petroleum
 - Sector: Energy Infrastructure & Fuel Forecourts
 - Classification: Operating Subsidiary (Active)
-- Live Web Address: https://mashaal-petroleum.vercel.app/
+- Live Web Address: https://petroleum.mashaalgroups.com/
 - Holding Profile: https://mashaalgroups.com/businesses/mashaal-petroleum
 - Operations:
   1. Total PARCO Authorized Forecourt: Khanpur Road, District Rahim Yar Khan, Punjab, Pakistan.
@@ -53,13 +53,15 @@ MASHAAL GROUP (mashaalgroups.com) is NOT associated or affiliated with "PetroMas
 
 ### Vertical 3: Mashaal Foods
 - Sector: Consumer Goods & Agri-Food Commodities
-- Classification: Upcoming Corporate Vertical
+- Classification: Operating Corporate Vertical (Active)
+- Live Web Address: https://food.mashaalgroups.com/
 - Holding Profile: https://mashaalgroups.com/businesses/mashaal-foods
 - Scope: Structured procurement, packaging, and commercial wholesale distribution of essential edible staples and food commodities with disciplined cold-chain governance.
 
 ### Vertical 4: Mashaal Rent A Car
 - Sector: Corporate Fleet Solutions & Passenger Mobility
-- Classification: Upcoming Corporate Vertical
+- Classification: Operating Corporate Vertical (Active)
+- Live Web Address: https://rentacar.mashaalgroups.com/
 - Holding Profile: https://mashaalgroups.com/businesses/mashaal-rent-a-car
 - Scope: Tailored long-term corporate vehicle leasing, executive passenger transportation, and enterprise mobility support integrated with Mashaal Petroleum fleet service points.
 

@@ -49,7 +49,9 @@ export default function JsonLd() {
         "telephone": "+971-4-8863390",
         "sameAs": [
           "https://www.mashwanis.com/",
-          "https://mashaal-petroleum.vercel.app/"
+          "https://petroleum.mashaalgroups.com/",
+          "https://food.mashaalgroups.com/",
+          "https://rentacar.mashaalgroups.com/"
         ],
         "subOrganization": [
           {
@@ -57,7 +59,7 @@ export default function JsonLd() {
             "@id": "https://mashaalgroups.com/#petroleum",
             "name": "Mashaal Petroleum",
             "description": "Premier retail forecourt operator in Punjab, Pakistan with authorized Total PARCO and Pakistan State Oil (PSO) stations.",
-            "url": "https://mashaal-petroleum.vercel.app/",
+            "url": "https://petroleum.mashaalgroups.com/",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
             }
@@ -76,7 +78,8 @@ export default function JsonLd() {
             "@type": "Organization",
             "@id": "https://mashaalgroups.com/#foods",
             "name": "Mashaal Foods",
-            "description": "Upcoming corporate consumer staples, food commodities, and cold-chain supply vertical.",
+            "description": "Operating consumer staples, essential food commodities, and cold-chain supply vertical.",
+            "url": "https://food.mashaalgroups.com/",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
             }
@@ -85,7 +88,8 @@ export default function JsonLd() {
             "@type": "Organization",
             "@id": "https://mashaalgroups.com/#rentacar",
             "name": "Mashaal Rent A Car",
-            "description": "Upcoming corporate mobility, executive passenger leasing, and fleet management vertical.",
+            "description": "Operating corporate mobility, executive passenger leasing, and fleet management vertical.",
+            "url": "https://rentacar.mashaalgroups.com/",
             "parentOrganization": {
               "@id": "https://mashaalgroups.com/#corporation"
             }

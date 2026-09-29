@@ -14,7 +14,7 @@
 ### 1. Mashaal Petroleum
 - **Sector**: Energy & Retail Fuel Forecourts
 - **Status**: Active & Operating (24/7/365)
-- **Official Live Platform**: https://mashaal-petroleum.vercel.app/
+- **Official Live Platform**: https://petroleum.mashaalgroups.com/
 - **Operations**:
   - **Total PARCO Station**: Khanpur Road, District Rahim Yar Khan, Punjab, Pakistan. Offers Total Excellium fuels, 24/7 M-Mart convenience retail, automated tyre care, and lubricants.
   - **Pakistan State Oil (PSO) Station**: Raiwind Road, Raiwind, Lahore, Punjab, Pakistan. Offers Altron Premium & Altron X 97 fuels, Shop Stop convenience store, and on-site 24/7 ATM banking.
@@ -31,12 +31,14 @@
 
 ### 3. Mashaal Foods
 - **Sector**: Food Commodities & Consumer Staples
-- **Status**: Upcoming Group Expansion
-- **Focus**: Transparent sourcing of consumer food staples, supply-chain discipline, cold-chain storage, and commercial distribution.
+- **Status**: Active & Operating
+- **Official Live Platform**: https://food.mashaalgroups.com/
+- **Focus**: Sourcing and wholesale distribution of consumer food staples and commodities, disciplined supply-chain governance, cold-chain storage, and commercial distribution.
 
 ### 4. Mashaal Rent A Car
 - **Sector**: Corporate Mobility & Fleet Management
-- **Status**: Upcoming Group Expansion
+- **Status**: Active & Operating
+- **Official Live Platform**: https://rentacar.mashaalgroups.com/
 - **Focus**: Structured corporate vehicle leasing, executive passenger mobility, commercial logistics support, and scheduled fleet servicing leveraging Mashaal Petroleum forecourt facilities.
 
 ## Official Pages
