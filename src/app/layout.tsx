@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mashaalgroups.com"),
+  metadataBase: new URL("https://www.mashaalgroups.com"),
   title: "MASHAAL GROUP — Diversified Parent Corporate Enterprise",
   description:
     "MASHAAL GROUP (mashaalgroups.com) is an institutional parent corporate enterprise governing independent operating businesses across energy forecourts (Mashaal Petroleum), global maritime freight forwarding (Mashwani Shipping L.L.C.), consumer food commodities (Mashaal Foods), and executive mobility (Mashaal Rent A Car).",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "Dubai Logistics",
     "Pakistan Energy Forecourts"
   ],
-  authors: [{ name: "MASHAAL GROUP", url: "https://mashaalgroups.com" }],
+  authors: [{ name: "MASHAAL GROUP", url: "https://www.mashaalgroups.com" }],
   creator: "MASHAAL GROUP",
   publisher: "MASHAAL GROUP",
   robots: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "MASHAAL GROUP — Diversified Parent Corporate Enterprise",
     description:
       "A diversified group of businesses built across energy forecourts, global maritime trade, food staples, and mobility across UAE and Pakistan.",
-    url: "https://mashaalgroups.com",
+    url: "https://www.mashaalgroups.com",
     siteName: "MASHAAL GROUP",
     locale: "en_US",
     type: "website",

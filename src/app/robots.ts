@@ -31,7 +31,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://mashaalgroups.com/sitemap.xml',
-    host: 'https://mashaalgroups.com',
+    sitemap: 'https://www.mashaalgroups.com/sitemap.xml',
+    host: 'https://www.mashaalgroups.com',
   };
 }

@@ -28,14 +28,14 @@ export default function HouseDetail({ id }: { id: string }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": `https://mashaalgroups.com/#${b.id}`,
+    "@id": `https://www.mashaalgroups.com/#${b.id}`,
     name,
     alternateName: b.id === "foods" ? ["Mashaal Food"] : undefined,
     description: b.shortDescription,
-    url: `https://mashaalgroups.com/businesses/${b.slug}`,
+    url: `https://www.mashaalgroups.com/businesses/${b.slug}`,
     sameAs: b.externalUrl ? [b.externalUrl] : undefined,
     email: b.contactInfo?.email,
-    parentOrganization: { "@id": "https://mashaalgroups.com/#corporation" },
+    parentOrganization: { "@id": "https://www.mashaalgroups.com/#corporation" },
   };
 
   return (
