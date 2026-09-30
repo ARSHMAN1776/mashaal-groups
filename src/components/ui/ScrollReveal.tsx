@@ -11,6 +11,7 @@ interface ScrollRevealProps extends HTMLMotionProps<"div"> {
   className?: string;
   viewportMargin?: string;
   once?: boolean;
+  animateOnLoad?: boolean;
 }
 
 export function ScrollReveal({
@@ -21,6 +22,7 @@ export function ScrollReveal({
   className = "",
   viewportMargin = "-50px",
   once = true,
+  animateOnLoad = false,
   ...props
 }: ScrollRevealProps) {
   const getVariants = () => {
@@ -58,8 +60,9 @@ export function ScrollReveal({
   return (
     <motion.div
       initial={initial}
-      whileInView={whileInView}
-      viewport={{ once, margin: viewportMargin }}
+      {...(animateOnLoad
+        ? { animate: whileInView }
+        : { whileInView, viewport: { once, margin: viewportMargin } })}
       transition={{
         duration,
         delay,

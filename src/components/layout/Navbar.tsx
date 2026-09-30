@@ -3,249 +3,200 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { BUSINESSES } from "@/lib/data";
+import { houseName } from "@/lib/utils";
 import BrandLogo from "@/components/ui/BrandLogo";
+
+const PRIMARY_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "The Group" },
+  { href: "/businesses", label: "Our Businesses" },
+  { href: "/partnerships", label: "Partnerships" },
+  { href: "/contact", label: "Contact" },
+];
+
+const EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [businessesDropdown, setBusinessesDropdown] = useState(false);
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const reduce = useReducedMotion();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
-    setMobileMenuOpen(false);
-    setBusinessesDropdown(false);
+    setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#190308]/95 backdrop-blur-md border-b border-white/10 shadow-2xl py-3.5"
-          : "bg-gradient-to-b from-[#190308]/90 via-[#24060C]/60 to-transparent border-b border-white/5 py-5"
-      }`}
-    >
-      <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
-        {/* Brand Logo - Optimized Minimal & Premium */}
-        <Link
-          href="/"
-          className="group flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059] py-1"
-          aria-label="MASHAAL GROUPS Corporate Holding"
-        >
-          {/* Corporate SVG Emblem */}
-          <BrandLogo className="w-9 h-9 sm:w-10 sm:h-10" />
-
-          <div className="flex flex-col">
-            <span className="font-sans font-bold text-base sm:text-lg tracking-[0.08em] text-white uppercase group-hover:text-[#DEBF7D] transition-colors leading-tight">
-              MASHAAL GROUPS
-            </span>
-            <div className="flex items-center gap-1.5 mt-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059]" />
-              <span className="text-[9px] font-mono uppercase tracking-[0.22em] text-[#C5B5AE] font-medium leading-none">
-                HOLDING ENTERPRISE
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-40 transition-[background-color,border-color] duration-700 ${
+          scrolled || open
+            ? "bg-[#190308]/85 backdrop-blur-xl border-b border-white/[0.07]"
+            : "bg-transparent border-b border-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-[72px] max-w-corporate items-center justify-between px-6 sm:px-8 lg:px-12">
           <Link
             href="/"
-            className={`text-xs uppercase tracking-[0.14em] font-medium transition-colors hover:text-[#DEBF7D] ${
-              pathname === "/" ? "text-[#DEBF7D] font-semibold" : "text-[#F7F3EE]"
-            }`}
+            className="group relative z-50 flex items-center gap-3"
+            aria-label="Mashaal Group home"
           >
-            Overview
+            <BrandLogo className="h-9 w-9" />
+            <span className="font-serif text-[1.35rem] font-medium tracking-[0.14em] text-[#F7F3EE] uppercase">
+              Mashaal
+              <span className="ml-2 hidden text-[#C5A059] sm:inline">Group</span>
+            </span>
           </Link>
 
-          <Link
-            href="/about"
-            className={`text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:text-[#DEBF7D] ${
-              pathname === "/about" ? "text-[#DEBF7D] font-semibold" : "text-[#F7F3EE]"
-            }`}
-          >
-            The Group
-          </Link>
-
-          {/* Businesses Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setBusinessesDropdown(true)}
-            onMouseLeave={() => setBusinessesDropdown(false)}
-          >
-            <Link
-              href="/businesses"
-              className={`flex items-center gap-1.5 text-xs uppercase tracking-[0.16em] font-medium transition-colors hover:text-[#DEBF7D] ${
-                pathname.startsWith("/businesses") ? "text-[#DEBF7D] font-semibold" : "text-[#F7F3EE]"
-              }`}
-            >
-              <span>Our Businesses</span>
-              <ChevronDown
-                className={`w-3.5 h-3.5 text-[#C5B5AE] transition-transform duration-200 ${
-                  businessesDropdown ? "rotate-180 text-[#DEBF7D]" : ""
+          <nav className="hidden items-center gap-10 lg:flex" aria-label="Main">
+            {PRIMARY_LINKS.slice(1, 4).map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={isActive(l.href) ? "page" : undefined}
+                className={`text-xs font-semibold uppercase tracking-[0.24em] transition-colors duration-500 hover:text-[#DEBF7D] ${
+                  isActive(l.href) ? "text-[#DEBF7D]" : "text-[#F7F3EE]/90"
                 }`}
-              />
-            </Link>
-
-            {/* Dropdown Card */}
-            {businessesDropdown && (
-              <div className="absolute top-full -left-6 pt-3 w-80 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                <div className="bg-[#24060C] border border-white/15 rounded-md shadow-2xl p-3 backdrop-blur-xl">
-                  <div className="text-[10px] font-mono tracking-widest text-[#C5B5AE] uppercase px-3 py-1.5 border-b border-white/10 mb-1 flex items-center justify-between">
-                    <span>Portfolio Verticals</span>
-                    <span className="text-[#C5A059]">04 Sectors</span>
-                  </div>
-                  <div className="space-y-1">
-                    {BUSINESSES.map((b) => (
-                      <Link
-                        key={b.id}
-                        href={`/businesses/${b.slug}`}
-                        className="group flex items-start justify-between p-2.5 rounded hover:bg-[#370C15] transition-colors"
-                      >
-                        <div className="space-y-0.5">
-                          <div className="flex items-center gap-2">
-                            <span className="font-mono text-[10px] text-[#C5A059]">{b.number}</span>
-                            <span className="text-xs font-sans font-semibold text-white group-hover:text-[#DEBF7D] transition-colors font-semibold">
-                              {b.name}
-                            </span>
-                          </div>
-                          <span className="text-[10px] text-[#C5B5AE] block pl-5">
-                            {b.category}
-                          </span>
-                        </div>
-                        <span
-                          className={`text-[9px] px-1.5 py-0.5 rounded font-mono uppercase font-semibold ${
-                            b.status === "Active"
-                              ? "bg-emerald-950/60 text-emerald-400 border border-emerald-500/30"
-                              : "bg-white/5 text-[#C5B5AE] border border-white/10"
-                          }`}
-                        >
-                          {b.status}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="pt-2 mt-2 border-t border-white/10 px-2 pb-1">
-                    <Link
-                      href="/businesses"
-                      className="text-[11px] font-sans text-[#C5A059] hover:text-[#DEBF7D] flex items-center justify-between group"
-                    >
-                      <span>Explore All Verticals</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/#presence"
-            className="text-xs uppercase tracking-[0.16em] font-medium text-[#F7F3EE] transition-colors hover:text-[#DEBF7D]"
-          >
-            Regional Footprint
-          </Link>
-
-          <Link
-            href="/contact"
-            className={`text-xs uppercase tracking-[0.14em] font-medium transition-colors hover:text-[#DEBF7D] ${
-              pathname === "/contact" ? "text-[#DEBF7D] font-semibold" : "text-[#F7F3EE]"
-            }`}
-          >
-            Contact
-          </Link>
-        </nav>
-
-        {/* Action Button */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#190308] bg-[#FAF8F5] hover:bg-[#DEBF7D] px-5 py-2.5 rounded transition-all duration-200 shadow-sm active:scale-[0.98]"
-          >
-            <span>Corporate Inquiries</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-white hover:text-[#DEBF7D] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A059]"
-          aria-expanded={mobileMenuOpen}
-          aria-label="Toggle mobile menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#190308] border-b border-white/15 px-6 py-6 space-y-5 animate-in fade-in slide-in-from-top-4 duration-300">
-          <div className="space-y-3 pb-4 border-b border-white/10">
-            <Link
-              href="/"
-              className="block text-sm uppercase tracking-widest text-white hover:text-[#DEBF7D]"
-            >
-              Overview
-            </Link>
-            <Link
-              href="/about"
-              className="block text-sm uppercase tracking-widest text-white hover:text-[#DEBF7D]"
-            >
-              The Group & Governance
-            </Link>
-            <Link
-              href="/businesses"
-              className="block text-sm uppercase tracking-widest text-[#DEBF7D] font-semibold"
-            >
-              Our Businesses (All Verticals)
-            </Link>
-            <div className="pl-4 space-y-2 pt-1">
-              {BUSINESSES.map((b) => (
-                <Link
-                  key={b.id}
-                  href={`/businesses/${b.slug}`}
-                  className="flex items-center justify-between text-xs text-[#C5B5AE] hover:text-white py-1"
-                >
-                  <span>{b.name}</span>
-                  <span className="font-mono text-[9px] opacity-70">({b.status})</span>
-                </Link>
-              ))}
-            </div>
-            <Link
-              href="/#presence"
-              className="block text-sm uppercase tracking-widest text-white hover:text-[#DEBF7D]"
-            >
-              Regional Footprint
-            </Link>
-
-          </div>
-
-          <div className="pt-2">
+              >
+                {l.label}
+              </Link>
+            ))}
             <Link
               href="/contact"
-              className="block text-center w-full py-3 bg-[#FAF8F5] text-[#190308] font-bold text-xs uppercase tracking-widest rounded"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#C5A059]/50 py-1.5 pl-5 pr-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-[#F7F3EE] transition-[background-color,border-color] duration-500 hover:border-[#DEBF7D] hover:bg-[#C5A059]/10 active:scale-[0.98]"
             >
-              Contact Holding Office
+              Contact
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#C5A059]/20 text-[#DEBF7D] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:-translate-y-px group-hover:translate-x-0.5">
+                <Arrow />
+              </span>
             </Link>
-          </div>
+            <button
+              onClick={() => setOpen(true)}
+              className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F7F3EE]/90 transition-colors hover:text-[#DEBF7D]"
+              aria-label="Open menu"
+            >
+              Menu
+            </button>
+          </nav>
+
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="relative z-50 flex h-11 w-11 items-center justify-center lg:hidden"
+            aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            <span
+              className={`absolute h-px w-6 bg-[#F7F3EE] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                open ? "rotate-45" : "-translate-y-[4px]"
+              }`}
+            />
+            <span
+              className={`absolute h-px w-6 bg-[#F7F3EE] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                open ? "-rotate-45" : "translate-y-[4px]"
+              }`}
+            />
+          </button>
         </div>
-      )}
-    </header>
+      </header>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: reduce ? 0 : 0.5, ease: EASE }}
+            className="fixed inset-0 z-30 overflow-y-auto bg-[#190308]/97 backdrop-blur-2xl"
+            data-lenis-prevent
+          >
+            <div className="mx-auto grid min-h-[100dvh] max-w-corporate grid-cols-1 gap-12 px-6 pb-16 pt-28 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12 lg:pt-36">
+              <ul className="space-y-1 lg:col-span-7">
+                {PRIMARY_LINKS.map((l, i) => (
+                  <li key={l.href} className="overflow-hidden">
+                    <motion.div
+                      initial={reduce ? false : { y: "110%" }}
+                      animate={{ y: 0 }}
+                      transition={{ duration: 0.9, ease: EASE, delay: 0.08 + i * 0.07 }}
+                    >
+                      <Link
+                        href={l.href}
+                        className={`display block py-1 text-5xl transition-colors duration-500 hover:text-[#DEBF7D] sm:text-6xl lg:text-6xl ${
+                          isActive(l.href) ? "text-[#DEBF7D]" : "text-[#F7F3EE]"
+                        }`}
+                      >
+                        {l.label}
+                      </Link>
+                    </motion.div>
+                  </li>
+                ))}
+              </ul>
+
+              <motion.div
+                initial={reduce ? false : { opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: EASE, delay: 0.4 }}
+                className="lg:col-span-5 lg:pt-6"
+              >
+                <p className="eyebrow mb-6">The four businesses</p>
+                <ul className="divide-y divide-white/10 border-y border-white/10">
+                  {BUSINESSES.map((b) => (
+                    <li key={b.id}>
+                      <Link
+                        href={`/businesses/${b.slug}`}
+                        className="group flex items-baseline justify-between gap-4 py-4"
+                      >
+                        <span className="font-serif text-2xl text-[#F7F3EE] transition-colors duration-500 group-hover:text-[#DEBF7D]">
+                          {houseName(b.name)}
+                        </span>
+                        <span className="max-w-[38%] text-right text-xs tracking-[0.08em] text-[#BBA79F]">
+                          {b.category.split("&")[0].trim()}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-10 max-w-xs text-sm leading-relaxed text-[#DCCFC7]">
+                  inquiries@mashaalgroups.com
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
+function Arrow() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+      <path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

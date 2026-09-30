@@ -1,216 +1,198 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, ShieldCheck, CheckCircle2, Globe2, Building2, Scale, Users } from "lucide-react";
-import { BUSINESSES } from "@/lib/data";
+import PageHero from "@/components/ui/PageHero";
+import ClosingCta from "@/components/ui/ClosingCta";
+import Faq from "@/components/seo/Faq";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 export const metadata = {
-  title: "The Group & Governance — MASHAAL GROUP",
+  alternates: { canonical: "/about" },
+  title: "The Group and Governance | MASHAAL GROUP",
   description:
-    "Explore the corporate architecture, fiduciary governance, and verified milestones of MASHAAL GROUP as a diversified parent holding enterprise.",
+    "How MASHAAL GROUP is structured: a parent holding that governs independent operating businesses across energy, shipping, food and mobility.",
 };
+
+const PILLARS = [
+  {
+    title: "Stewardship of capital",
+    text: "Disciplined allocation across the group keeps every company on a resilient balance sheet, with its own financing capacity and a conservative view of risk.",
+  },
+  {
+    title: "Room to lead",
+    text: "Each business runs with specialist management. The group board oversees governance without slowing the work.",
+  },
+  {
+    title: "Integrity without exceptions",
+    text: "From fuel calibration to customs compliance and freight manifests, every business is held to the same rule.",
+  },
+];
+
+const MILESTONES = [
+  {
+    when: "2017",
+    where: "Dubai, United Arab Emirates",
+    title: "Mashwani Shipping L.L.C. is established",
+    text: "Incorporated in Dubai as an NVOCC agent and international freight forwarder. Direct ocean carrier contracts open trade corridors across the GCC, Pakistan, India and Afghan transit routes.",
+  },
+  {
+    when: "Forecourt network",
+    where: "Punjab, Pakistan",
+    title: "Total PARCO and PSO forecourts open",
+    text: "Flagship fuel stations on Khanpur Road (Rahim Yar Khan) and Raiwind Road (Lahore), with refinery-sealed supply, digital volumetric checks and round-the-clock service.",
+  },
+  {
+    when: "Today",
+    where: "Parent group",
+    title: "One brand for four businesses",
+    text: "The holding structure now unites oversight of every operating company and guides measured growth in food commodities and executive mobility.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col w-full bg-[#190308] text-[#F7F3EE]">
-      {/* Page Header */}
-      <section className="pt-36 pb-20 border-b border-white/10 bg-gradient-to-b from-[#190308] to-[#24060C]">
-        <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-          <ScrollReveal variant="fade-up" className="max-w-3xl space-y-4">
-            <span className="holding-label text-[#C5A059]">
-              THE PARENT ENTERPRISE
-            </span>
-            <h1 className="font-sans font-bold text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white uppercase">
-              ABOUT MASHAAL GROUP
-            </h1>
-            <p className="font-sans text-base sm:text-lg text-[#C5B5AE] leading-relaxed">
-              A diversified corporate group governing autonomous businesses across essential industries. Built on operational reliability, patient capital allocation, and institutional integrity.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <div className="flex w-full flex-col bg-[#190308] text-[#F7F3EE]">
+      <PageHero
+        eyebrow="The parent enterprise"
+        title={
+          <>
+            A holding built on <em>patience.</em>
+          </>
+        }
+        lede="Mashaal Group governs autonomous businesses in essential industries, guided by operational reliability, patient capital and institutional integrity."
+        imagePosition="50% 35%"
+      />
 
-      {/* 01: Who We Are */}
-      <section className="bg-[#FAF8F5] text-[#1C1514] py-24 border-b border-[#ECE5DA]">
-        <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <ScrollReveal variant="fade-up" delay={0.1} className="lg:col-span-6 space-y-6">
-              <span className="holding-label text-[#9C857E]">
-                WHO WE ARE
-              </span>
-              <h2 className="font-sans font-bold text-3xl sm:text-4xl font-bold text-[#1C1514] leading-tight">
-                An institutional parent structure empowering specialized businesses.
-              </h2>
-              <div className="w-12 h-[2px] bg-[#C5A059]" />
-              <p className="font-sans text-sm sm:text-base text-[#4A403C] leading-relaxed">
-                MASHAAL GROUP is structured as a parent corporate group rather than an individual commercial company. By separating strategic holding governance from day-to-day vertical operations, we empower our subsidiary leadership teams to focus entirely on operational excellence within their respective sectors.
-              </p>
-              <p className="font-sans text-sm sm:text-base text-[#736762] leading-relaxed">
-                Our portfolio encompasses critical physical industries: certified energy forecourts under authorized Total PARCO and Pakistan State Oil (PSO) franchises, Dubai-headquartered international freight forwarding and NVOCC logistics through Mashwani Shipping L.L.C., and emerging consumer and mobility divisions in structured planning.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal variant="zoom-in" delay={0.25} className="lg:col-span-6">
-              <div className="relative aspect-[4/3] w-full rounded overflow-hidden border border-[#ECE5DA] shadow-md bg-[#ECE5DA]">
-                <Image
-                  src="/images/corporate-headquarters.jpg"
-                  alt="Mashaal Group Corporate Headquarters Suite"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 02: Our Approach (The Holding Model) */}
-      <section className="bg-[#24060C] text-[#F7F3EE] py-24 border-b border-white/10">
-        <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-          <ScrollReveal variant="fade-up" className="max-w-2xl space-y-3 mb-16">
-            <span className="holding-label text-[#C5A059]">
-              OUR APPROACH
-            </span>
-            <h2 className="font-sans font-bold text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              The Three Pillars of Holding Governance
+      {/* Structure */}
+      <section className="bg-[#190308] py-16 sm:py-24">
+        <div className="mx-auto grid max-w-corporate grid-cols-1 gap-10 px-6 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12">
+          <ScrollReveal variant="fade-up" className="lg:col-span-7">
+            <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
+              A parent group, <em>not a single company.</em>
             </h2>
-            <p className="text-xs sm:text-sm text-[#C5B5AE]">
-              How MASHAAL GROUP creates lasting value across its operating companies.
+            <div className="hairline my-6 max-w-[7rem]" />
+            <p className="lede text-lg leading-[1.85] text-[#F7F3EE]/90">
+              Strategy and governance sit with the group. Daily operations sit with the people who
+              run each business. That separation lets every leadership team focus completely on
+              excellence in its own sector.
+            </p>
+            <p className="lede mt-6 text-base leading-[1.9] text-[#DCCFC7]">
+              Today the portfolio spans authorized Total PARCO and Pakistan State Oil forecourts,
+              international freight forwarding through Mashwani Shipping L.L.C. in Dubai, and the
+              food and mobility businesses that complete the group.
             </p>
           </ScrollReveal>
 
-          <StaggerContainer staggerChildren={0.12} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StaggerItem className="p-8 bg-[#190308] border border-white/10 rounded space-y-4 shadow-xl">
-              <div className="w-10 h-10 rounded bg-[#370C15] flex items-center justify-center text-[#DEBF7D]">
-                <Scale className="w-5 h-5" />
+          <ScrollReveal variant="fade-up" delay={0.15} className="lg:col-span-5">
+            <div className="ml-auto max-w-md border border-[#C5A059]/40 bg-gradient-to-br from-[#2C0910] to-[#190308]">
+              <div className="p-7 sm:p-8">
+                <p className="eyebrow">The group</p>
+                <p className="display mt-3 text-2xl sm:text-3xl">Strategy, capital and governance</p>
               </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-white">
-                Fiduciary &amp; Capital Stewardship
-              </h3>
-              <p className="text-xs sm:text-sm text-[#C5B5AE] leading-relaxed">
-                Disciplined capital allocation across operating companies ensures each entity maintains a resilient balance sheet, independent financing capacity, and conservative risk management.
-              </p>
-            </StaggerItem>
-
-            <StaggerItem className="p-8 bg-[#190308] border border-white/10 rounded space-y-4 shadow-xl">
-              <div className="w-10 h-10 rounded bg-[#370C15] flex items-center justify-center text-[#DEBF7D]">
-                <Users className="w-5 h-5" />
+              <div className="flex items-center gap-3 px-7 sm:px-8" aria-hidden="true">
+                <span className="h-px flex-1 bg-[#C5A059]/40" />
+                <span className="text-xs text-[#C5A059]">supports</span>
+                <span className="h-px flex-1 bg-[#C5A059]/40" />
               </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-white">
-                Vertical Autonomy
-              </h3>
-              <p className="text-xs sm:text-sm text-[#C5B5AE] leading-relaxed">
-                Operating companies function with specialized management teams possessing deep sector expertise. The holding board provides governance oversight without stifling operational execution.
-              </p>
-            </StaggerItem>
-
-            <StaggerItem className="p-8 bg-[#190308] border border-white/10 rounded space-y-4 shadow-xl">
-              <div className="w-10 h-10 rounded bg-[#370C15] flex items-center justify-center text-[#DEBF7D]">
-                <ShieldCheck className="w-5 h-5" />
+              <div className="p-7 sm:p-8">
+                <p className="eyebrow">Each business</p>
+                <p className="display mt-3 text-2xl sm:text-3xl">Daily operations and results</p>
               </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-white">
-                Zero-Tolerance Integrity
-              </h3>
-              <p className="text-xs sm:text-sm text-[#C5B5AE] leading-relaxed">
-                From fuel calibration checks to international customs compliance and authenticated freight manifests, uncompromised integrity is mandatory across all portfolio businesses.
-              </p>
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 03: Verified Group Timeline (No Invented Dates!) */}
-      <section className="bg-[#FAF8F5] text-[#1C1514] py-24 border-b border-[#ECE5DA]">
-        <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-          <ScrollReveal variant="fade-up" className="max-w-2xl space-y-3 mb-16">
-            <span className="holding-label text-[#9C857E]">
-              GROUP TIMELINE
-            </span>
-            <h2 className="font-sans font-bold text-3xl sm:text-4xl font-bold text-[#1C1514]">
-              Verified Milestones &amp; Evolution
-            </h2>
-            <p className="text-xs sm:text-sm text-[#736762]">
-              Chronicle of authentic operating accomplishments across Dubai and Pakistan.
-            </p>
-          </ScrollReveal>
-
-          <StaggerContainer staggerChildren={0.15} className="max-w-4xl space-y-12 border-l-2 border-[#ECE5DA] pl-6 sm:pl-10 relative ml-4">
-            {/* Milestone: Mashwani 2017 */}
-            <StaggerItem className="relative space-y-2">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1 w-4 h-4 rounded-full bg-[#6B1C28] border-4 border-[#FAF8F5]" />
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xl font-bold text-[#6B1C28]">2017</span>
-                <span className="text-xs font-mono uppercase tracking-widest text-[#9C857E]">
-                  Dubai, United Arab Emirates
-                </span>
-              </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-[#1C1514]">
-                Establishment of Mashwani Shipping L.L.C.
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A403C] leading-relaxed">
-                Incorporated in Dubai as an NVOCC agent and international freight forwarder. Secured direct ocean carrier service contracts and developed vital logistics corridors spanning GCC, Pakistan, India, and specialized Afghan transit trade.
-              </p>
-            </StaggerItem>
-
-            {/* Milestone: Petroleum Forecourt Expansion */}
-            <StaggerItem className="relative space-y-2">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1 w-4 h-4 rounded-full bg-[#6B1C28] border-4 border-[#FAF8F5]" />
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xl font-bold text-[#6B1C28]">Operational Network</span>
-                <span className="text-xs font-mono uppercase tracking-widest text-[#9C857E]">
-                  Punjab, Pakistan
-                </span>
-              </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-[#1C1514]">
-                Authorized Total PARCO &amp; PSO Forecourt Network
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A403C] leading-relaxed">
-                Development and operation of flagship certified fuel stations on Khanpur Road (District Rahim Yar Khan) and Raiwind Road (Lahore), instituting 100% refinery-sealed fuel supplies, digital volumetric checks, and 24/7 highway hospitality.
-              </p>
-            </StaggerItem>
-
-            {/* Milestone: Holding Consolidation */}
-            <StaggerItem className="relative space-y-2">
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1 w-4 h-4 rounded-full bg-[#6B1C28] border-4 border-[#FAF8F5]" />
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xl font-bold text-[#6B1C28]">Present Era</span>
-                <span className="text-xs font-mono uppercase tracking-widest text-[#9C857E]">
-                  Parent Group Governance
-                </span>
-              </div>
-              <h3 className="font-sans font-semibold text-lg font-bold text-[#1C1514]">
-                Formalization of MASHAAL GROUP Brand Architecture
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A403C] leading-relaxed">
-                Consolidation of holding structure to unify oversight across operating companies and steer measured expansion into consumer food commodities (Mashaal Foods) and corporate transport (Mashaal Rent A Car).
-              </p>
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 04: Leadership & Governance Ethos */}
-      <section id="leadership" className="bg-[#190308] text-[#F7F3EE] py-24">
-        <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-          <ScrollReveal variant="fade-up" className="max-w-3xl space-y-6">
-            <span className="holding-label text-[#C5A059]">
-              LEADERSHIP ETHOS
-            </span>
-            <blockquote className="font-sans font-bold text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-relaxed italic">
-              &ldquo;A diversified group is only as strong as the physical integrity of its operating businesses. We build not on speculative promises, but on tangible infrastructure, reliable trade corridors, and respect for every partner and motorist we serve.&rdquo;
-            </blockquote>
-            <div className="pt-2">
-              <span className="font-sans font-semibold text-sm font-bold text-white block">
-                Executive Directorate &amp; Holding Advisory Board
-              </span>
-              <span className="text-xs text-[#DEBF7D] font-mono">
-                MASHAAL GROUP Holding Enterprise
-              </span>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Pillars */}
+      <section className="bg-[#24060C] py-16 sm:py-24">
+        <div className="mx-auto max-w-corporate px-6 sm:px-8 lg:px-12">
+          <ScrollReveal variant="fade-up" className="mb-10 max-w-3xl">
+            <p className="eyebrow">Our approach</p>
+            <h2 className="display mt-5 text-3xl sm:text-4xl lg:text-5xl">
+              Three ideas that <em>guide the group.</em>
+            </h2>
+          </ScrollReveal>
+
+          <StaggerContainer staggerChildren={0.15} className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {PILLARS.map((p, i) => (
+              <StaggerItem
+                key={p.title}
+                className={`border p-6 sm:p-8 ${
+                  i === 0
+                    ? "border-[#C5A059]/40 bg-gradient-to-br from-[#370C15] via-[#24060C] to-[#190308]"
+                    : "border-white/[0.1] bg-[#190308]"
+                }`}
+              >
+                <span aria-hidden="true" className="block h-px w-10 bg-[#C5A059]" />
+                <h3 className="display mt-5 text-2xl sm:text-3xl">{p.title}</h3>
+                <p className="mt-4 text-base leading-[1.8] text-[#DCCFC7]">{p.text}</p>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="bg-[#190308] py-16 sm:py-24">
+        <div className="mx-auto max-w-corporate px-6 sm:px-8 lg:px-12">
+          <ScrollReveal variant="fade-up" className="mb-10 max-w-3xl">
+            <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
+              How the group <em>took shape.</em>
+            </h2>
+          </ScrollReveal>
+
+          <StaggerContainer staggerChildren={0.14} className="border-t border-white/[0.1]">
+            {MILESTONES.map((m) => (
+              <StaggerItem
+                key={m.title}
+                className="grid grid-cols-1 gap-6 border-b border-white/[0.1] py-7 lg:grid-cols-12 lg:gap-10 lg:py-9"
+              >
+                <div className="lg:col-span-4">
+                  <p className="display text-4xl text-[#DEBF7D] sm:text-5xl">{m.when}</p>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#BBA79F]">
+                    {m.where}
+                  </p>
+                </div>
+                <div className="lg:col-span-8">
+                  <h3 className="display text-2xl sm:text-3xl">{m.title}</h3>
+                  <p className="lede mt-5 text-base leading-[1.85] text-[#DCCFC7]">{m.text}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section id="leadership" className="relative isolate overflow-hidden bg-[#24060C] py-16 sm:py-24">
+        <div className="mx-auto max-w-corporate px-6 sm:px-8 lg:px-12">
+          <ScrollReveal variant="fade-up" duration={1.1} className="max-w-5xl">
+            <span aria-hidden="true" className="display block text-6xl leading-none text-[#C5A059]/50">
+              &ldquo;
+            </span>
+            <figure><blockquote className="display -mt-6 text-2xl italic text-[#F7F3EE] sm:text-3xl lg:text-4xl">
+              A group is only as strong as the physical integrity of its businesses. We build on
+              infrastructure, trade routes and respect for every partner and motorist we serve.
+            </blockquote>
+            <figcaption className="mt-8">
+              <p className="text-sm font-semibold tracking-wide text-[#F7F3EE]">
+                Executive Directorate and Holding Advisory Board
+              </p>
+              <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[#C5A059]">
+                Mashaal Group
+              </p>
+            </figcaption></figure>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <Faq />
+
+      <ClosingCta
+        title={
+          <>
+            Talk to the <em>executive office.</em>
+          </>
+        }
+        text="For partnerships, institutional relations and media enquiries."
+      />
     </div>
   );
 }

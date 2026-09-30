@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [{ source: '/investors', destination: '/partnerships', permanent: true }];
+  },
   async headers() {
     return [
       {

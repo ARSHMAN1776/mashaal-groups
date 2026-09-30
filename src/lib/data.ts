@@ -32,7 +32,7 @@ export const BUSINESSES: BusinessVertical[] = [
     shortDescription:
       "Operating official Total PARCO and Pakistan State Oil (PSO) forecourts across Punjab, delivering 100% refinery-sealed fuels, certified digital calibration, and 24/7 highway hospitality.",
     longDescription:
-      "Mashaal Petroleum is an established fuel forecourt operator serving private motorists, commercial transit drivers, and industrial logistics fleets across Punjab, Pakistan. With authorized franchises under Pakistan's leading energy corporations—Total PARCO and Pakistan State Oil (PSO)—every forecourt adheres to strict zero-tolerance calibration, unadulterated terminal supply, and round-the-clock motorist amenities.",
+      "Mashaal Petroleum is an established fuel forecourt operator serving private motorists, commercial transit drivers, and industrial logistics fleets across Punjab, Pakistan. With authorized franchises under Pakistan's leading energy corporations (Total PARCO and Pakistan State Oil, PSO), every forecourt adheres to strict zero-tolerance calibration, unadulterated terminal supply, and round-the-clock motorist amenities.",
     image: "/images/mashaal-petroleum.jpg",
     slug: "mashaal-petroleum",
     externalUrl: "https://petroleum.mashaalgroups.com/",
@@ -49,8 +49,8 @@ export const BUSINESSES: BusinessVertical[] = [
       { label: "Service Continuity", value: "24/7 Year-Round" }
     ],
     locations: [
-      "Total PARCO Station — Khanpur Road, District Rahim Yar Khan, Punjab, Pakistan",
-      "Pakistan State Oil (PSO) Station — Raiwind Road, Raiwind, Lahore, Punjab, Pakistan"
+      "Total PARCO Station, Khanpur Road, District Rahim Yar Khan, Punjab, Pakistan",
+      "Pakistan State Oil (PSO) Station, Raiwind Road, Raiwind, Lahore, Punjab, Pakistan"
     ],
     services: [
       "Euro-5 Diesel & High-Octane 97 RON Dispensation",
@@ -212,6 +212,6 @@ export const GROUP_PHILOSOPHY = [
   },
   {
     title: "PATIENT CAPITAL STEWARDSHIP",
-    desc: "We focus on businesses that serve essential human and commercial needs—energy distribution, international trade corridors, nourishment, and transportation."
+    desc: "We focus on businesses that serve essential human and commercial needs: energy distribution, international trade corridors, nourishment, and transportation."
   }
 ];

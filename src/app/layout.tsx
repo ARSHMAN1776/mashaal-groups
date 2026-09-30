@@ -1,9 +1,30 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import JsonLd from "@/components/seo/JsonLd";
+
+const serif = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif-next",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jakarta-next",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#190308",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mashaalgroups.com"),
@@ -26,9 +47,6 @@ export const metadata: Metadata = {
   authors: [{ name: "MASHAAL GROUP", url: "https://mashaalgroups.com" }],
   creator: "MASHAAL GROUP",
   publisher: "MASHAAL GROUP",
-  alternates: {
-    canonical: "https://mashaalgroups.com",
-  },
   robots: {
     index: true,
     follow: true,
@@ -77,14 +95,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${serif.variable} ${jakarta.variable}`}>
       <head>
         <JsonLd />
       </head>
       <body className="bg-[#24060C] text-[#F7F3EE] antialiased selection:bg-[#C5A059] selection:text-[#190308] min-h-screen flex flex-col">
+        <a href="#main" className="skip-link">Skip to content</a>
+        <div className="grain" aria-hidden="true" />
         <SmoothScrollProvider>
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main id="main" className="flex-grow">{children}</main>
           <Footer />
         </SmoothScrollProvider>
       </body>

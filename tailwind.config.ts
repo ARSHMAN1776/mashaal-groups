@@ -38,11 +38,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        brand: ["var(--font-brand)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
-        editorial: ["var(--font-editorial)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
-        sans: ["var(--font-jakarta)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Outfit", "Plus Jakarta Sans", "sans-serif"],
-        serif: ["var(--font-brand)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        brand: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        editorial: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
+        serif: ["var(--font-display)", "Georgia", "serif"],
       },
       maxWidth: {
         corporate: "1380px",

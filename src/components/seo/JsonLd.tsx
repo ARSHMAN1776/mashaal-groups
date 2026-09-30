@@ -47,6 +47,24 @@ export default function JsonLd() {
           }
         ],
         "telephone": "+971-4-8863390",
+        "email": "inquiries@mashaalgroups.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "inquiries@mashaalgroups.com",
+            "availableLanguage": ["English"],
+            "areaServed": ["AE", "PK"]
+          }
+        ],
+        "areaServed": ["United Arab Emirates", "Pakistan"],
+        "knowsAbout": [
+          "Fuel forecourts",
+          "International freight forwarding",
+          "NVOCC logistics",
+          "Food commodities",
+          "Corporate fleet leasing"
+        ],
         "sameAs": [
           "https://www.mashwanis.com/",
           "https://petroleum.mashaalgroups.com/",
@@ -95,6 +113,36 @@ export default function JsonLd() {
             }
           }
         ]
+      },
+      {
+        "@type": "GasStation",
+        "@id": "https://mashaalgroups.com/#total-parco-rahim-yar-khan",
+        "name": "Mashaal Petroleum, Total PARCO Station",
+        "url": "https://mashaalgroups.com/businesses/mashaal-petroleum",
+        "openingHours": "Mo-Su 00:00-24:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Khanpur Road",
+          "addressLocality": "Rahim Yar Khan",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "parentOrganization": { "@id": "https://mashaalgroups.com/#petroleum" }
+      },
+      {
+        "@type": "GasStation",
+        "@id": "https://mashaalgroups.com/#pso-lahore",
+        "name": "Mashaal Petroleum, Pakistan State Oil Station",
+        "url": "https://mashaalgroups.com/businesses/mashaal-petroleum",
+        "openingHours": "Mo-Su 00:00-24:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Raiwind Road",
+          "addressLocality": "Lahore",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "parentOrganization": { "@id": "https://mashaalgroups.com/#petroleum" }
       },
       {
         "@type": "WebSite",

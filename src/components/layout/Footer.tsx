@@ -1,151 +1,111 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Phone, Mail, Building2, Globe2, ShieldCheck } from "lucide-react";
 import { BUSINESSES } from "@/lib/data";
+import { houseName } from "@/lib/utils";
 import BrandLogo from "@/components/ui/BrandLogo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#190308] border-t border-white/10 text-[#F7F3EE] pt-16 pb-12">
-      <div className="max-w-corporate mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Top Tier: Holding Identity & Quick Links */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
-          {/* Brand Col */}
-          <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="group inline-flex items-center gap-3">
-              <BrandLogo className="w-10 h-10" />
-              <div className="flex flex-col">
-                <span className="font-sans text-xl font-bold tracking-[0.08em] text-white block uppercase group-hover:text-[#DEBF7D] transition-colors">
-                  MASHAAL GROUPS
-                </span>
-                <span className="text-[9px] uppercase tracking-[0.24em] text-[#DEBF7D] font-mono">
-                  PARENT HOLDING ENTERPRISE
-                </span>
-              </div>
+    <footer className="relative bg-[#0F0104] text-[#F7F3EE]">
+      {/* Gold rule that clearly separates the footer from the page above */}
+      <div className="h-[3px] w-full bg-gradient-to-r from-transparent via-[#C5A059] to-transparent" />
+
+      <div
+        className="pointer-events-none absolute inset-x-0 top-[3px] h-full opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #C5A059 1px, transparent 1px), linear-gradient(to bottom, #C5A059 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-corporate px-6 pb-12 pt-16 sm:px-8 lg:px-12 lg:pt-20">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <Link href="/" className="group inline-flex items-center gap-4">
+              <BrandLogo className="h-12 w-12" />
+              <span className="font-serif text-2xl font-semibold tracking-[0.14em] uppercase sm:text-3xl">
+                Mashaal <span className="text-[#C5A059]">Group</span>
+              </span>
             </Link>
-            <p className="text-sm text-[#C5B5AE] leading-relaxed max-w-sm">
-              A diversified corporate group governing independent operating businesses across energy forecourts, global maritime freight, consumer sectors, and mobility.
+            <p className="mt-6 max-w-sm text-base leading-[1.75] text-[#DCCFC7]">
+              A family of four independent businesses across energy, shipping, food and mobility,
+              held to one standard.
             </p>
-            <div className="pt-2 flex items-center gap-3 text-xs text-[#DEBF7D]">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                <Globe2 className="w-3.5 h-3.5 text-[#C5A059]" />
-                <span>UAE &amp; Pakistan Corridors</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/5 border border-white/10">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C5A059]" />
-                <span>Institutional Governance</span>
-              </span>
-            </div>
+            <a
+              href="mailto:inquiries@mashaalgroups.com"
+              className="link-line mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-[#DEBF7D]"
+            >
+              inquiries@mashaalgroups.com
+            </a>
           </div>
 
-          {/* Business Directory Col */}
-          <div className="lg:col-span-3 space-y-4">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#C5A059] block">
-              Business Verticals
-            </span>
-            <ul className="space-y-2.5 text-xs">
-              {BUSINESSES.map((b) => (
-                <li key={b.id}>
-                  <Link
-                    href={`/businesses/${b.slug}`}
-                    className="group inline-flex items-center justify-between w-full hover:text-[#DEBF7D] transition-colors"
-                  >
-                    <span className="text-[#F7F3EE] group-hover:text-white">
-                      {b.name}
-                    </span>
-                    <span className="text-[10px] text-[#C5B5AE] font-mono">
-                      {b.status === "Active" ? "Operating" : "Upcoming"}
-                    </span>
+          <div className="grid grid-cols-2 gap-10 lg:col-span-7 lg:pl-16">
+            <div>
+              <h2 className="eyebrow mb-5 border-b border-[#C5A059]/30 pb-3">Businesses</h2>
+              <ul className="space-y-3">
+                {BUSINESSES.map((b) => (
+                  <li key={b.id}>
+                    <Link
+                      href={`/businesses/${b.slug}`}
+                      className="font-serif text-lg font-semibold text-[#F7F3EE] transition-colors duration-500 hover:text-[#DEBF7D]"
+                    >
+                      {houseName(b.name)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="eyebrow mb-5 border-b border-[#C5A059]/30 pb-3">The Group</h2>
+              <ul className="space-y-3 text-[0.95rem] text-[#DCCFC7]">
+                <li>
+                  <Link href="/about" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    About the group
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Group Navigation */}
-          <div className="lg:col-span-2 space-y-4">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#C5A059] block">
-              The Group
-            </span>
-            <ul className="space-y-2.5 text-xs text-[#C5B5AE]">
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  Corporate Architecture
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#leadership" className="hover:text-white transition-colors">
-                  Leadership &amp; Ethos
-                </Link>
-              </li>
-              <li>
-                <Link href="/businesses" className="hover:text-white transition-colors">
-                  Portfolio Matrix
-                </Link>
-              </li>
-              <li>
-                <Link href="/#presence" className="hover:text-white transition-colors">
-                  Regional Footprint
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact Holding Office
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Verified Regional Offices */}
-          <div className="lg:col-span-3 space-y-4">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#C5A059] block">
-              Verified Office Presence
-            </span>
-            <div className="space-y-3 text-xs text-[#C5B5AE]">
-              <div className="p-3 bg-[#24060C] border border-white/10 rounded">
-                <div className="font-semibold text-white mb-1 flex items-center gap-1.5">
-                  <Building2 className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Dubai Logistics Office (Mashwani)</span>
-                </div>
-                <p className="text-[11px] leading-relaxed">
-                  Office #507, 5th Floor, Abraj Al Mamzar Building, Al Mamzar, Dubai, UAE
-                </p>
-                <p className="text-[11px] text-[#DEBF7D] mt-1 font-mono">
-                  Tel: +971-4-8863390
-                </p>
-              </div>
-
-              <div className="p-3 bg-[#24060C] border border-white/10 rounded">
-                <div className="font-semibold text-white mb-1 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
-                  <span>Punjab Forecourts (Mashaal Petroleum)</span>
-                </div>
-                <p className="text-[11px] leading-relaxed">
-                  Total PARCO Khanpur Rd, Rahim Yar Khan &amp; PSO Raiwind Rd, Lahore
-                </p>
-                <p className="text-[11px] text-[#DEBF7D] mt-1 font-mono">
-                  24/7 Forecourt Operations
-                </p>
-              </div>
+                <li>
+                  <Link href="/about#leadership" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    Leadership
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#presence" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    Where we operate
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partnerships" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    Partnerships
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="transition-colors duration-500 hover:text-[#DEBF7D]">
+                    Privacy
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Tier: Legal & Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C5B5AE]">
-          <div>
-            &copy; {new Date().getFullYear()} MASHAAL GROUP. All rights reserved. Diversified parent corporate holding.
-          </div>
-          <div className="flex items-center gap-6">
-            <Link href="/about" className="hover:text-white transition-colors">
-              Holding Governance
-            </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
-              Fiduciary Inquiries
-            </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
-              Direct Subsidiary Desks
-            </Link>
-          </div>
+      {/* Bottom bar, a separate darker band */}
+      <div className="relative border-t border-white/[0.08] bg-black/40">
+        <div className="mx-auto flex max-w-corporate flex-col items-start justify-between gap-3 px-6 py-5 text-[0.78rem] tracking-[0.05em] text-[#BBA79F] sm:flex-row sm:items-center sm:px-8 lg:px-12">
+          <p>&copy; {new Date().getFullYear()} Mashaal Group. All rights reserved.</p>
+          <p>Dubai, United Arab Emirates and Punjab, Pakistan</p>
+          <a
+            href="#main"
+            className="text-xs font-semibold uppercase tracking-[0.22em] text-[#DEBF7D] transition-colors hover:text-[#F7F3EE]"
+          >
+            Back to top
+          </a>
         </div>
       </div>
     </footer>
