@@ -27,8 +27,8 @@ const OFFICES = [
     ],
   },
   {
-    name: "Karachi, Mashwani Shipping",
-    kicker: "Pakistan operations",
+    name: "Mashwani Shipping Private Ltd",
+    kicker: "Karachi, Pakistan",
     lines: ["Bungalow D-63, near Altamash General Hospital, Clifton Block 1, Karachi, Pakistan."],
     contact: [
       { label: "+92 323 2008789", href: "tel:+923232008789" },
@@ -42,7 +42,11 @@ const OFFICES = [
       "Total PARCO forecourt, Khanpur Road, Rahim Yar Khan.",
       "Pakistan State Oil forecourt, Raiwind Road, Lahore.",
     ],
-    contact: [{ label: "contact@mashaalpetroleum.pk", href: "mailto:contact@mashaalpetroleum.pk" }],
+    contact: [
+      { label: "+92 304 2774444", href: "tel:+923042774444" },
+      { label: "WhatsApp", href: "https://wa.me/923042774444", whatsapp: true },
+      { label: "contact@mashaalpetroleum.pk", href: "mailto:contact@mashaalpetroleum.pk" },
+    ],
   },
 ];
 
@@ -81,7 +85,11 @@ export default function ContactPage() {
                 <ul className="space-y-2 text-base lg:col-span-3">
                   {o.contact.map((c) => (
                     <li key={c.href}>
-                      <a href={c.href} className="link-line text-[#DEBF7D]">
+                      <a
+                        href={c.href}
+                        {..."whatsapp" in c && c.whatsapp ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+                        className="link-line text-[#DEBF7D]"
+                      >
                         {c.label}
                       </a>
                     </li>

@@ -124,6 +124,7 @@ export default function JsonLd() {
         "name": "Mashaal Petroleum, Total PARCO Station",
         "url": "https://www.mashaalgroups.com/businesses/mashaal-petroleum",
         "openingHours": "Mo-Su 00:00-24:00",
+        "telephone": "+92-304-2774444",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Khanpur Road",
@@ -139,6 +140,7 @@ export default function JsonLd() {
         "name": "Mashaal Petroleum, Pakistan State Oil Station",
         "url": "https://www.mashaalgroups.com/businesses/mashaal-petroleum",
         "openingHours": "Mo-Su 00:00-24:00",
+        "telephone": "+92-304-2774444",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Raiwind Road",

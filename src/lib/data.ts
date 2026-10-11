@@ -17,6 +17,8 @@ export interface BusinessVertical {
   contactInfo?: {
     address?: string;
     phone?: string;
+    /** International digits only, e.g. 923001234567, used for the WhatsApp link */
+    whatsapp?: string;
     email?: string;
   };
 }
@@ -62,7 +64,8 @@ export const BUSINESSES: BusinessVertical[] = [
     ],
     contactInfo: {
       address: "Khanpur Road, Rahim Yar Khan & Raiwind Road, Lahore, Punjab, Pakistan",
-      phone: "Inquiries via Forecourt Management Desk",
+      phone: "+92 304 2774444",
+      whatsapp: "923042774444",
       email: "contact@mashaalpetroleum.pk"
     }
   },

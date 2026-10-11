@@ -4,6 +4,7 @@ import { BUSINESSES } from "@/lib/data";
 import { houseName } from "@/lib/utils";
 import PageHero from "@/components/ui/PageHero";
 import ClosingCta from "@/components/ui/ClosingCta";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 
 function ArrowIcon() {
@@ -41,6 +42,7 @@ export default function HouseDetail({ id }: { id: string }) {
   return (
     <div className="flex w-full flex-col bg-[#190308] text-[#F7F3EE]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {b.contactInfo?.whatsapp && <FloatingWhatsApp number={b.contactInfo.whatsapp} />}
       <PageHero image={b.image} imageAlt={name} eyebrow={b.category} title={name} lede={b.tagline}>
         <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-6">
           {b.externalUrl && (
@@ -156,7 +158,18 @@ export default function HouseDetail({ id }: { id: string }) {
                   {b.contactInfo.phone && (
                     <div>
                       <dt className="sr-only">Phone</dt>
-                      <dd className="text-[#F7F3EE]">{b.contactInfo.phone}</dd>
+                      <dd className="text-[#F7F3EE]">
+                        {!b.contactInfo.phone.includes("/") && /\d{6}/.test(b.contactInfo.phone) ? (
+                          <a
+                            href={`tel:${b.contactInfo.phone.replace(/[^\d+]/g, "").replace(/^0/, "+92")}`}
+                            className="link-line"
+                          >
+                            {b.contactInfo.phone}
+                          </a>
+                        ) : (
+                          b.contactInfo.phone
+                        )}
+                      </dd>
                     </div>
                   )}
                   {b.contactInfo.email && (
