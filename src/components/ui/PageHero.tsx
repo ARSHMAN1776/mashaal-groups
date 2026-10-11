@@ -56,7 +56,7 @@ export default function PageHero({
       <div className="mx-auto w-full max-w-corporate px-6 pb-10 pt-32 sm:px-8 sm:pb-16 lg:px-12">
         <ScrollReveal animateOnLoad variant="fade-up" duration={1.1} delay={0.15} className="max-w-4xl">
           {eyebrow && <p className="eyebrow mb-8">{eyebrow}</p>}
-          <h1 className="display text-4xl text-[#F7F3EE] sm:text-5xl lg:text-6xl">{title}</h1>
+          <h1 className="display text-3xl text-[#F7F3EE] sm:text-5xl lg:text-6xl">{title}</h1>
           {lede && (
             <p className="lede mt-5 text-base leading-[1.7] text-[#F7F3EE]/90 sm:text-lg">{lede}</p>
           )}

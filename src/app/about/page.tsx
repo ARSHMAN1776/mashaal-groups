@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import ClosingCta from "@/components/ui/ClosingCta";
 import Faq from "@/components/seo/Faq";
@@ -157,6 +158,26 @@ export default function AboutPage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Founders teaser */}
+      <section className="border-y border-[#C5A059]/25 bg-[#190308] py-14 sm:py-20">
+        <div className="mx-auto flex max-w-corporate flex-wrap items-end justify-between gap-x-10 gap-y-6 px-6 sm:px-8 lg:px-12">
+          <ScrollReveal variant="fade-up" className="max-w-2xl">
+            <h2 className="display text-3xl sm:text-4xl lg:text-5xl">
+              Meet the <em>founders.</em>
+            </h2>
+            <p className="lede mt-4 text-base leading-[1.75] text-[#DCCFC7] sm:text-lg">
+              The people whose work built Mashaal Group and who lead it today.
+            </p>
+          </ScrollReveal>
+          <Link
+            href="/founders"
+            className="link-line text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-[#DEBF7D]"
+          >
+            Meet the founders
+          </Link>
         </div>
       </section>
 

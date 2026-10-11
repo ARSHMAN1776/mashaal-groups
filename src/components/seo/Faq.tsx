@@ -26,6 +26,10 @@ export const FAQ_ITEMS = [
     a: "Sea freight (FCL, LCL and breakbulk), air freight and charters, overland trucking across the Gulf and Levant, Afghan transit cargo, warehousing and cross-stuffing, and customs clearance with local delivery.",
   },
   {
+    q: "Who founded Mashaal Group?",
+    a: "Mashaal Group was founded by Nisar Shah, co-founder, and Muhammad Asim Khan, founder. Muhammad Asim Khan is also the owner and now leads the group and oversees all of its businesses.",
+  },
+  {
     q: "How can I contact Mashaal Group?",
     a: "Write to the executive office at inquiries@mashaalgroups.com, or use the contact page to reach each business directly. Partnership enquiries can be sent to the same address.",
   },

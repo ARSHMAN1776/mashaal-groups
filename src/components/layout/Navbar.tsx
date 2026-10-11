@@ -11,10 +11,14 @@ import BrandLogo from "@/components/ui/BrandLogo";
 const PRIMARY_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "The Group" },
+  { href: "/founders", label: "Founders" },
   { href: "/businesses", label: "Our Businesses" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/contact", label: "Contact" },
 ];
+
+// Order of the links in the desktop bar
+const DESKTOP_HREFS = ["/about", "/businesses", "/founders", "/partnerships"];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -64,19 +68,19 @@ export default function Navbar() {
             aria-label="Mashaal Group home"
           >
             <BrandLogo className="h-9 w-9" />
-            <span className="font-serif text-[1.35rem] font-medium tracking-[0.14em] text-[#F7F3EE] uppercase">
+            <span className="whitespace-nowrap font-serif text-[1.35rem] font-medium tracking-[0.14em] text-[#F7F3EE] uppercase">
               Mashaal
-              <span className="ml-2 hidden text-[#C5A059] sm:inline">Group</span>
+              <span className="ml-2 hidden text-[#C5A059] sm:inline lg:hidden xl:inline">Group</span>
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-10 lg:flex" aria-label="Main">
-            {PRIMARY_LINKS.slice(1, 4).map((l) => (
+          <nav className="hidden items-center gap-5 whitespace-nowrap xl:gap-9 lg:flex" aria-label="Main">
+            {DESKTOP_HREFS.map((h) => PRIMARY_LINKS.find((l) => l.href === h)!).map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 aria-current={isActive(l.href) ? "page" : undefined}
-                className={`text-xs font-semibold uppercase tracking-[0.24em] transition-colors duration-500 hover:text-[#DEBF7D] ${
+                className={`text-xs font-semibold uppercase tracking-[0.16em] xl:tracking-[0.24em] transition-colors duration-500 hover:text-[#DEBF7D] ${
                   isActive(l.href) ? "text-[#DEBF7D]" : "text-[#F7F3EE]/90"
                 }`}
               >
@@ -85,7 +89,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-3 rounded-full border border-[#C5A059]/50 py-1.5 pl-5 pr-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-[#F7F3EE] transition-[background-color,border-color] duration-500 hover:border-[#DEBF7D] hover:bg-[#C5A059]/10 active:scale-[0.98]"
+              className="group inline-flex items-center gap-3 rounded-full border border-[#C5A059]/50 py-1.5 pl-5 pr-1.5 text-xs font-semibold uppercase tracking-[0.16em] xl:tracking-[0.24em] text-[#F7F3EE] transition-[background-color,border-color] duration-500 hover:border-[#DEBF7D] hover:bg-[#C5A059]/10 active:scale-[0.98]"
             >
               Contact
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#C5A059]/20 text-[#DEBF7D] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:-translate-y-px group-hover:translate-x-0.5">
@@ -94,7 +98,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setOpen(true)}
-              className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F7F3EE]/90 transition-colors hover:text-[#DEBF7D]"
+              className="hidden text-xs font-semibold uppercase tracking-[0.16em] xl:inline xl:tracking-[0.24em] text-[#F7F3EE]/90 transition-colors hover:text-[#DEBF7D]"
               aria-label="Open menu"
             >
               Menu

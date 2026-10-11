@@ -48,6 +48,10 @@ export default function JsonLd() {
         ],
         "telephone": "+971-4-8863390",
         "email": "inquiries@mashaalgroups.com",
+        "founder": [
+          { "@type": "Person", "name": "Nisar Shah", "jobTitle": "Co-Founder" },
+          { "@type": "Person", "name": "Muhammad Asim Khan", "jobTitle": "Founder and Owner" }
+        ],
         "contactPoint": [
           {
             "@type": "ContactPoint",
